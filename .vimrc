@@ -1,18 +1,24 @@
-set number	" enable line numbers
+" enable line numbers
+set number
 
 filetype plugin on
 
-syntax on	" enable syntax highlighting 
+" enable syntax highlighting 
+syntax on
 
 
 " ignorecase in seatch pattern except when using capital letters	
 set ic 	
 set smartcase
-set hlsearch 	" highlight all matches
 
-set is " highlight math while typing search pattern (incsearch)
+" highlight all matches
+set hlsearch
 
-set t_Co=16	" pywal colors (i think)
+" highlight match while typing search pattern (incsearch)
+set is  
+
+" pywal colors (i think)
+set t_Co=16
 
 " bottom commandline
 set showcmd
