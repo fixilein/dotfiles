@@ -1,0 +1,8 @@
+[user]
+	email = felix.troebinger@gmail.com
+	name = Felix Tröbinger
+[alias]
+	glog = log --pretty=oneline --abbrev-commit --decorate --graph
+	s = status
+[core]
+	autocrlf = input
