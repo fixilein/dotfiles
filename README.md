@@ -10,6 +10,7 @@ Configs for
 - rofi (application launcher)
 - vim
 - GIMP
+- git change test
 
 
 ## Wallpaper
