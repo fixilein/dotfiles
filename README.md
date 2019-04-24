@@ -4,14 +4,13 @@ Configs for
 - i3 (window manager)
 - compton (compositor)
 - Xresources
-- fish
+- fish (shell) 
 - ranger (file manager)
-- polybar
+- polybar (status bar) 
 - rofi (application launcher)
 - vim
 - GIMP
-- git change test
-
+- some other configs and small scripts 
 
 ## Wallpaper
 ![Wallpaper](https://unsplash.com/photos/KT3WlrL_bsg/download?force=true)
