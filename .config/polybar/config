@@ -17,9 +17,6 @@
 ;==========================================================
 
 
-
-; THIS WILL BE THE MAIN CONFIG ONCE ITS DONE
-
 [colors]
 background = #00dddddd
 
@@ -32,7 +29,7 @@ secondary = ${xrdb:color2:#222}
 alert = ${xrdb:color3:#222}
 
 
-[bar/bottom_bar]
+[bar/bottom]
 monitor = ${env:MONITOR:eDP1}
 bottom = true
 width = 100%
@@ -63,7 +60,7 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = i3 xwindow
 modules-center = music
-modules-right = battery wlan date
+modules-right = filesystem battery wlan date
 
 tray-position = right
 tray-detached = true
@@ -126,7 +123,9 @@ interval = 25
 
 mount-0 = /
 
-label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
+;label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
+;label-mounted = %mountpoint%: %percentage_free%% of %total%
+label-mounted = %free%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
