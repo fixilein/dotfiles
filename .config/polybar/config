@@ -193,6 +193,7 @@ label-urgent-padding = ${module/bspwm.label-urgent-padding}
 [module/alsa]
 type = internal/alsa
 format-volume =vol: <label-volume>
+label-muted = vol: muted
 
 
 
@@ -275,7 +276,8 @@ format-charging =bat: <animation-charging> <label-charging>
 format-discharging =bat: <animation-discharging> <label-discharging>
 ;format-discharging-underline = ${self.format-charging-underline}
 
-format-full-prefix = " "
+; format-full-prefix = " "
+format-full-prefix = "bat:"
 format-full-prefix-foreground = ${colors.foreground-alt}
 ;format-full-underline = ${self.format-charging-underline}
 
