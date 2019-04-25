@@ -249,7 +249,7 @@ format-disconnected =
 
 [module/date]
 type = internal/date
-interval = 5
+interval = 1.0
 
 date =
 date-alt = " %d.%m.%y"
