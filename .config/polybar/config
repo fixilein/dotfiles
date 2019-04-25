@@ -60,7 +60,7 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = i3 xwindow
 modules-center = music
-modules-right = filesystem wlan backlight battery date
+modules-right = filesystem wlan alsa backlight battery date
 
 tray-position = right
 tray-detached = false
@@ -187,6 +187,13 @@ label-urgent-padding = ${module/bspwm.label-urgent-padding}
 
 ; Separator in between workspaces
 ; label-separator = |
+
+
+
+[module/alsa]
+type = internal/alsa
+format-volume =vol: <label-volume>
+
 
 
 [module/mpd]
