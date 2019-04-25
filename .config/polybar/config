@@ -125,7 +125,7 @@ mount-0 = /
 
 ;label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
 ;label-mounted = %mountpoint%: %percentage_free%% of %total%
-label-mounted = %mountpoint% %free%
+label-mounted =%mountpoint%: %free%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
@@ -207,11 +207,11 @@ type = internal/network
 interface = wlp2s0
 interval = 3.0
 
-format-connected = <ramp-signal> <label-connected>
+format-connected =wifi: <ramp-signal> <label-connected>
 ; format-connected-underline = #9f78e1
 label-connected = %essid%
 
-format-disconnected =
+format-disconnected =no wifi
 ;format-disconnected = <label-disconnected>
 ;format-disconnected-underline = ${self.format-connected-underline}
 ;label-disconnected = %ifname% disconnected
@@ -247,7 +247,7 @@ interval = 5
 date =
 date-alt = " %d.%m.%y"
 
-time = %H:%M
+time =time: %H:%M
 time-alt = %H:%M:%S
 
 format-prefix = 
@@ -262,10 +262,10 @@ battery = BAT0
 adapter = ADP1
 full-at = 98
 
-format-charging = <animation-charging> <label-charging>
+format-charging =bat: <animation-charging> <label-charging>
 ;format-charging-underline = #ffb52a
 
-format-discharging = <animation-discharging> <label-discharging>
+format-discharging =bat: <animation-discharging> <label-discharging>
 ;format-discharging-underline = ${self.format-charging-underline}
 
 format-full-prefix = " "
