@@ -60,7 +60,7 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = i3 xwindow
 modules-center = music
-modules-right = filesystem wlan battery date
+modules-right = filesystem wlan backlight battery date
 
 tray-position = right
 tray-detached = false
@@ -288,6 +288,17 @@ animation-discharging-1 = 
 animation-discharging-2 = 
 animation-discharging-foreground = ${colors.foreground-alt}
 animation-discharging-framerate = 750
+
+
+
+[module/backlight]
+type = internal/backlight
+
+; Use the following command to list available cards:
+; $ ls -1 /sys/class/backlight/
+card = intel_backlight
+format =screen: <label>
+
 
 
 [module/powermenu]
