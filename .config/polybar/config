@@ -60,12 +60,12 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = i3 xwindow
 modules-center = music
-modules-right = filesystem battery wlan date
+modules-right = filesystem wlan battery date
 
 tray-position = right
-tray-detached = true
+tray-detached = false
 tray-padding = 2 
-tray-offset-x = -95
+tray-offset-x = 0
 tray-scale = 0.9
 tray-background = #00000000
 
@@ -125,7 +125,7 @@ mount-0 = /
 
 ;label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
 ;label-mounted = %mountpoint%: %percentage_free%% of %total%
-label-mounted = %free%
+label-mounted = %mountpoint% %free%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
