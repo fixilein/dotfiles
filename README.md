@@ -12,13 +12,13 @@ Configs for
 - GIMP
 - some other configs and small scripts 
 
-## Wallpaper
-![Wallpaper](https://unsplash.com/photos/KT3WlrL_bsg/download?force=true)
-https://unsplash.com/photos/KT3WlrL_bsg
-
 
 ## Screenshots
 ![sc1](.config/screens/screen1.png)
 ![sc2](.config/screens/screen2.png)
 
+
+## Wallpaper
+![Wallpaper](https://unsplash.com/photos/KT3WlrL_bsg/download?force=true)
+https://unsplash.com/photos/KT3WlrL_bsg
 
