@@ -18,4 +18,7 @@ https://unsplash.com/photos/KT3WlrL_bsg
 
 
 ## Screenshots
-![sc](.config/screens/screen1.png)
+![sc1](.config/screens/screen1.png)
+![sc2](.config/screens/screen2.png)
+
+
