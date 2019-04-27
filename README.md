@@ -1,6 +1,9 @@
-# my dotfiles
+## Screenshots
+![sc1](.config/screens/screen1.png)
+![sc2](.config/screens/screen2.png)
 
-Configs for
+
+## Configs for
 - i3 (window manager)
 - compton (compositor)
 - Xresources
@@ -11,11 +14,6 @@ Configs for
 - vim
 - GIMP
 - some other configs and small scripts 
-
-
-## Screenshots
-![sc1](.config/screens/screen1.png)
-![sc2](.config/screens/screen2.png)
 
 
 ## Wallpaper
