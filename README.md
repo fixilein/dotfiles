@@ -3,7 +3,7 @@
 ![sc2](.config/screens/screen2.png)
 ![sc3](.config/screens/screen3.png)
 ![sclol](.config/screens/screenlol.png)
-cool-retro-term and oneko 
+cool-retro-term, cmatrix and oneko 
 
 
 ## Configs for
