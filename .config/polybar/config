@@ -59,7 +59,7 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = i3 xwindow
 modules-center = music
-modules-right = cpu memory filesystem wlan alsa backlight battery date
+modules-right = filesystem cpu memory wlan alsa backlight battery date
 
 tray-position = none
 tray-detached = false
