@@ -1,10 +1,6 @@
 ## Screenshots
 ![sc1](Pictures/screen1.png)
 ![sc2](Pictures/screen2.png)
-![sc3](Pictures/screen3.png)
-![sc4](Pictures/screen4.png)
-![sclol](Pictures/screenlol.png)
-cool-retro-term, cmatrix and oneko 
 
 
 ## Configs for
