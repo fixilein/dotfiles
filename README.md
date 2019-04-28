@@ -2,6 +2,7 @@
 ![sc1](.config/screens/screen1.png)
 ![sc2](.config/screens/screen2.png)
 ![sc3](.config/screens/screen3.png)
+![sc4](.config/screens/screen4.png)
 ![sclol](.config/screens/screenlol.png)
 cool-retro-term, cmatrix and oneko 
 
