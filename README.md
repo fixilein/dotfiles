@@ -1,9 +1,9 @@
 ## Screenshots
-![sc1](.config/screens/screen1.png)
-![sc2](.config/screens/screen2.png)
-![sc3](.config/screens/screen3.png)
-![sc4](.config/screens/screen4.png)
-![sclol](.config/screens/screenlol.png)
+![sc1](Pictures/screen1.png)
+![sc2](Pictures/screen2.png)
+![sc3](Pictures/screen3.png)
+![sc4](Pictures/screen4.png)
+![sclol](Pictures/screenlol.png)
 cool-retro-term, cmatrix and oneko 
 
 
