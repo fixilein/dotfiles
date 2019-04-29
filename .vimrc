@@ -25,3 +25,8 @@ set showcmd
 set laststatus=2
 
 set wildmenu
+
+
+" LaTeX
+map <F5> : !pdflatex % <CR><CR>
+map <F6> : !evince (echo % \| sed 's/tex$/pdf/') & disown <CR><CR>
