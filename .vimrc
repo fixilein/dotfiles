@@ -27,6 +27,6 @@ set laststatus=2
 set wildmenu
 
 
-" LaTeX
+" LaTeX (with fish shell) 
 map <F5> :w<CR> :!pdflatex % <CR><CR>
-map <F6> : !evince (echo % \| sed 's/tex$/pdf/') & disown <CR><CR>
+map <F6> : !evince (echo % \| sed 's/tex$/pdf/') 2> /dev/null & <CR><CR>
