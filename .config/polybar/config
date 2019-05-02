@@ -275,7 +275,7 @@ interval = 1.0
 date =
 date-alt = " %d.%m.%y"
 
-time =time: %H:%M
+time =%H:%M
 time-alt = %H:%M:%S
 
 format-prefix = 
