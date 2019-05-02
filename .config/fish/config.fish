@@ -9,6 +9,7 @@ end
 set -gx PATH $PATH .
 
 alias yeet "yaourt --noconfirm"
+alias q "exit"
 
 function fish_user_key_bindings
     for mode in insert default visual

@@ -10,7 +10,6 @@ SETUVAR _fish_abbr_cd_2E_2E_:cd\x20\x2e\x2e
 SETUVAR _fish_abbr_h:systemctl\x20hibernate
 SETUVAR _fish_abbr_p:python
 SETUVAR _fish_abbr_pac:sudo\x20pacman\x20\x2dS
-SETUVAR _fish_abbr_q:exit
 SETUVAR _fish_abbr_r:ranger
 SETUVAR _fish_abbr_u:sudo\x20pacman\x20\x2dSyu\x20\x26\x26\x20yaourt\x20\x2dSuya\x20\x2d\x2dnoconfirm
 SETUVAR fish_color_autosuggestion:777777
