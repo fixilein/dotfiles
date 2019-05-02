@@ -43,12 +43,13 @@
 """ LaTeX
 
 " LaTeX compile and view  (with fish shell) 
-	map <F5> :w<CR> :!pdflatex % <CR><CR>
-	map <F6> : !evince (echo % \| sed 's/tex$/pdf/') 2> /dev/null & <CR><CR>
+	autocmd FileType tex map <F5> :w<CR> :!pdflatex % <CR><CR>
+	autocmd FileType tex map <F6> : !evince (echo % \| sed 's/tex$/pdf/') 2> /dev/null & <CR><CR>
 
 "" copied from Luke Smith ""
 	" Word count:
 	autocmd FileType tex map <leader>w :w !detex \| wc -w<CR>
+
 	" Code snippets
 	autocmd FileType tex inoremap ,fr \begin{frame}<Enter>\frametitle{}<Enter><Enter><++><Enter><Enter>\end{frame}<Enter><Enter><++><Esc>6kf}i
 	autocmd FileType tex inoremap ,fi \begin{fitch}<Enter><Enter>\end{fitch}<Enter><Enter><++><Esc>3kA
@@ -106,6 +107,4 @@
 	autocmd Filetype markdown,rmd inoremap ,2 ##<Space><Enter><++><Esc>kA
 	autocmd Filetype markdown,rmd inoremap ,3 ###<Space><Enter><++><Esc>kA
 	autocmd Filetype markdown,rmd inoremap ,l --------<Enter>
-	autocmd Filetype rmd inoremap ,r ```{r}<CR>```<CR><CR><esc>2kO
-	autocmd Filetype rmd inoremap ,p ```{python}<CR>```<CR><CR><esc>2kO
-	autocmd Filetype rmd inoremap ,c ```<cr>```<cr><cr><esc>2kO
+
