@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # TODO: add args and filename 
 cp ~/Documents/templates/note.tex ~/Documents/new_note.tex
 vim ~/Documents/new_note.tex
