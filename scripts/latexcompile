@@ -1,0 +1,6 @@
+#!/bin/bash
+# TODO 
+# arg = file to compile
+# output in /tmp/latex
+# pdf in same folder 
+

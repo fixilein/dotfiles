@@ -1,4 +1,16 @@
 #!/bin/bash
-# TODO: add args and filename 
-cp ~/Documents/templates/note.tex ~/Documents/new_note.tex
-vim ~/Documents/new_note.tex
+# TODO: check if file already exists and if template exists 
+
+if test "$#" -lt 2; then
+	echo "Not enough arguments"
+	exit 1
+fi
+
+TEMPLATE="$HOME/Documents/templates/$1.tex"
+NEWFILE="$HOME/Docuemnts/$2.tex"
+
+echo $TEMPLATE
+echo $NEWFILE
+# cp $HOME/Documents/templates/$0.tex $HOME/Documents/$1.tex
+# cd $HOME/Documents
+# vim $HOME/Documents/new_note.tex
