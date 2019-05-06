@@ -7,7 +7,7 @@ end
 
 # add current directory . to PATH
 set -gx PATH $PATH .
-set -gx PATH $PATH ~/.scripts
+set -gx PATH $PATH ~/scripts
 
 alias yeet "yaourt --noconfirm"
 alias q "exit"
