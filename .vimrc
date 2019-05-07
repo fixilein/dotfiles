@@ -44,7 +44,7 @@
 
 " LaTeX compile and view  (with fish shell) 
 	autocmd FileType tex map <F5> :w<CR> :!latexcompile %:p <CR><CR>
-	autocmd FileType tex map <F6> : !evince (echo % \| sed 's/tex$/pdf/') 2> /dev/null & <CR><CR>
+	autocmd FileType tex map <F6> : !evince /tmp/latex/(echo % \| sed 's/tex$/pdf/') 2> /dev/null & <CR><CR>
 
 "" copied from Luke Smith ""
 	" Word count:
