@@ -1,5 +1,4 @@
 #!/bin/bash
-# TODO: check if file already exists and if template exists 
 
 if test "$#" -lt 2; then
 	echo "Not enough arguments"
@@ -7,10 +6,18 @@ if test "$#" -lt 2; then
 fi
 
 TEMPLATE="$HOME/Documents/templates/$1.tex"
-NEWFILE="$HOME/Docuemnts/$2.tex"
+NEWFILE="$HOME/Documents/$2.tex"
 
-echo $TEMPLATE
-echo $NEWFILE
-# cp $HOME/Documents/templates/$0.tex $HOME/Documents/$1.tex
-# cd $HOME/Documents
-# vim $HOME/Documents/new_note.tex
+if test ! -f "$TEMPLATE"; then
+	echo "No template with that name"
+	exit 2
+fi
+
+if test -f "$NEWFILE"; then
+	echo "file already exists"
+	exit 2
+fi
+
+cp "$TEMPLATE" "$NEWFILE"
+vim "$NEWFILE"
+
