@@ -1,12 +1,16 @@
 #!/bin/bash
 
 FILE="$1"
-FILEPATH=dirname "$1"
-FILENAME=basename "$1"
+FILEPATH=$(dirname "$1")
+FILEN=$(basename "$1")
+FILENAME=${FILEN%.tex}
 
 mkdir /tmp/latex/
-pdflatex -output-directory /tmp/latex/ "$FILE" 
+pdflatex -output-directory /tmp/latex "$FILE" 
 
-# cp /tmp/latex/"$FILENAME".pdf "$FILEPATH""$FILENAME".pdf
-# TODO copy pdf into scr folder 
+echo "$FILENAME"
+echo "$FILEPATH"
+
+mkdir "$FILEPATH/pdf"
+cp /tmp/latex/"$FILENAME".pdf "$FILEPATH"/pdf/"$FILENAME".pdf
 

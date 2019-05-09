@@ -63,7 +63,7 @@ modules-left = i3 xwindow
 modules-center = music
 modules-right = filesystem cpu memory wlan alsa backlight battery date
 
-tray-position = none
+tray-position = right
 tray-detached = false
 tray-padding = 2 
 tray-offset-x = 0
