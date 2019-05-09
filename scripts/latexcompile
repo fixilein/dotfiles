@@ -8,9 +8,6 @@ FILENAME=${FILEN%.tex}
 mkdir /tmp/latex/
 pdflatex -output-directory /tmp/latex "$FILE" 
 
-echo "$FILENAME"
-echo "$FILEPATH"
-
 mkdir "$FILEPATH/pdf"
 cp /tmp/latex/"$FILENAME".pdf "$FILEPATH"/pdf/"$FILENAME".pdf
 
