@@ -23,16 +23,18 @@
 " set wildmode=longest,list,full
 
 
-	let mapleader =","
-
-" Spell-check set to <leader>o, 'o' for 'orthography': by Luke Smith
-	map <leader>o :setlocal spell! spelllang=en_us<CR>
-
 " bottom commandline
 	set showcmd
 	set laststatus=2
 
 	set wildmenu
+
+" Set leader to comma
+	let mapleader =","
+
+
+" Spell-check set to <leader>o, 'o' for 'orthography': by Luke Smith
+	map <leader>o :setlocal spell! spelllang=en_us<CR>
 
 " Navigating with guides (by Luke Smith)
 	inoremap <leader><leader> <Esc>/<++><Enter>"_c4l
