@@ -7,6 +7,7 @@ fi
 
 TEMPLATE="$HOME/Documents/templates/$1.tex"
 NEWFILE="$HOME/Documents/$2.tex"
+FILEPATH=$(dirname "$NEWFILE")
 
 if test ! -f "$TEMPLATE"; then
 	echo "No template with that name"
@@ -18,6 +19,7 @@ if test -f "$NEWFILE"; then
 	exit 2
 fi
 
+mkdir "$FILEPATH"
 cp "$TEMPLATE" "$NEWFILE"
 vim "$NEWFILE"
 
