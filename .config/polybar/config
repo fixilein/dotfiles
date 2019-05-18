@@ -61,7 +61,7 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = i3 xwindow
 modules-center = music
-modules-right = filesystem cpu memory wlan alsa backlight battery date
+modules-right = alsa backlight battery date
 
 tray-position = right
 tray-detached = false
@@ -211,8 +211,8 @@ label-urgent-padding = ${module/bspwm.label-urgent-padding}
 
 [module/alsa]
 type = internal/alsa
-format-volume =vol: <label-volume>
-label-muted = vol: muted
+format-volume =v: <label-volume>
+label-muted = v: muted
 
 [module/wlan]
 type = internal/network
@@ -274,14 +274,14 @@ battery = BAT0
 adapter = ADP1
 full-at = 98
 
-format-charging =bat: <animation-charging> <label-charging>
+format-charging =b: <animation-charging> <label-charging>
 ;format-charging-underline = #ffb52a
 
-format-discharging =bat: <animation-discharging> <label-discharging>
+format-discharging =b: <animation-discharging> <label-discharging>
 ;format-discharging-underline = ${self.format-charging-underline}
 
 ; format-full-prefix = " "
-format-full-prefix = "bat:"
+format-full-prefix = "b:"
 format-full-prefix-foreground = ${colors.foreground-alt}
 ;format-full-underline = ${self.format-charging-underline}
 
@@ -310,7 +310,7 @@ type = internal/backlight
 ; Use the following command to list available cards:
 ; $ ls -1 /sys/class/backlight/
 card = intel_backlight
-format =screen: <label>
+format =s: <label>
 
 
 
