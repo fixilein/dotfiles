@@ -259,7 +259,7 @@ for_window [class="flameshot"] floating enable
 for_window [class="TelegramDesktop"] floating enable
 for_window [class="MATLAB R2018b - academic use"] floating enable
 for_window [class="Google-chrome"] border none
-#for_window [class="Evince"] border none
+for_window [class="Evince"] border none
 for_window [class="vlc"] fullscreen enable
 
 

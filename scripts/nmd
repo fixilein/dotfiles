@@ -6,8 +6,8 @@ if test "$#" -lt 2; then
          exit 1
 fi
 
-TEMPLATE="$HOME/Documents/tex-templates/$1.tex"
-NEWFILE="$HOME/Documents/$2.tex"
+TEMPLATE="$HOME/Documents/md-templates/$1.md"
+NEWFILE="$HOME/Documents/$2.md"
 FILEPATH=$(dirname "$NEWFILE")
 
 if test ! -f "$TEMPLATE"; then
