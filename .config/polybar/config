@@ -61,7 +61,7 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = i3 xwindow
 modules-center = music
-modules-right = alsa backlight battery date
+modules-right = updates-arch alsa backlight battery date
 
 tray-position = right
 tray-detached = false
@@ -89,6 +89,12 @@ cursor-scroll = ns-resize
 ;;;;;;;;;
 ;MODULES;
 ;;;;;;;;;
+
+
+[module/updates-arch]
+type = custom/script
+exec = ~/.config/polybar/updates-arch.sh
+interval = 600
 
 
 [module/music]
@@ -212,7 +218,7 @@ label-urgent-padding = ${module/bspwm.label-urgent-padding}
 [module/alsa]
 type = internal/alsa
 format-volume =v: <label-volume>
-label-muted = v: muted
+label-muted = v: -
 
 [module/wlan]
 type = internal/network

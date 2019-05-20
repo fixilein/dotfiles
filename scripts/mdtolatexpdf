@@ -1,0 +1,10 @@
+#!/bin/bash
+# TODO simplify
+
+FILE="$1"
+FILEPATH=$(dirname "$1")
+FILEN=$(basename "$1")
+FILENAME=${FILEN%.md}
+
+pandoc "$FILE" -f markdown -t latex -o "$FILEPATH"/"$FILEN".pdf
+
