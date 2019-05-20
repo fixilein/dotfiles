@@ -101,16 +101,16 @@
 	autocmd FileType markdown map <F5> :w<CR> :!mdtolatexpdf %:p <CR><CR>
 	autocmd FileType markdown map <F6> : !evince (echo %:p \| sed 's/md$/pdf/') 2> /dev/null & <CR><CR>
 
-	autocmd Filetype markdown,rmd map <leader>w yiWi[<esc>Ea](<esc>pa)
-	autocmd Filetype markdown,rmd inoremap ,n ---<Enter><Enter>
-	autocmd Filetype markdown,rmd inoremap ,b ****<++><Esc>F*hi
-	autocmd Filetype markdown,rmd inoremap ,s ~~~~<++><Esc>F~hi
-	autocmd Filetype markdown,rmd inoremap ,e **<++><Esc>F*i
-	autocmd Filetype markdown,rmd inoremap ,h ====<Space><++><Esc>F=hi
-	autocmd Filetype markdown,rmd inoremap ,i ![](<++>)<++><Esc>F[a
-	autocmd Filetype markdown,rmd inoremap ,a [](<++>)<++><Esc>F[a
-	autocmd Filetype markdown,rmd inoremap ,1 #<Space><Enter><++><Esc>kA
-	autocmd Filetype markdown,rmd inoremap ,2 ##<Space><Enter><++><Esc>kA
-	autocmd Filetype markdown,rmd inoremap ,3 ###<Space><Enter><++><Esc>kA
-	autocmd Filetype markdown,rmd inoremap ,l --------<Enter>
+	autocmd Filetype markdown map <leader>w yiWi[<esc>Ea](<esc>pa)
+	autocmd Filetype markdown inoremap ,n ---<Enter><Enter>
+	autocmd Filetype markdown inoremap ,b ****<++><Esc>F*hi
+	autocmd Filetype markdown inoremap ,s ~~~~<++><Esc>F~hi
+	autocmd Filetype markdown inoremap ,e **<++><Esc>F*i
+	autocmd Filetype markdown inoremap ,h ====<Space><++><Esc>F=hi
+	autocmd Filetype markdown inoremap ,i ![](<++>)<++><Esc>F[a
+	autocmd Filetype markdown inoremap ,a [](<++>)<++><Esc>F[a
+	autocmd Filetype markdown inoremap ,1 #<Space><Enter><++><Esc>kA
+	autocmd Filetype markdown inoremap ,2 ##<Space><Enter><++><Esc>kA
+	autocmd Filetype markdown inoremap ,3 ###<Space><Enter><++><Esc>kA
+	autocmd Filetype markdown inoremap ,l --------<Enter>
 

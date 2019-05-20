@@ -1,8 +1,3 @@
----
-title: "dotfiles"
-author: [Felix Tröbinger]
-...
-
 ## Screenshots
 ![sc1](Pictures/screen1.png)
 ![sc2](Pictures/screen2.png)
