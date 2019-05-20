@@ -5,7 +5,7 @@ if test "$#" -lt 2; then
 	exit 1
 fi
 
-TEMPLATE="$HOME/Documents/tex-templates/$1.tex"
+TEMPLATE="$HOME/Documents/latex-templates/$1.tex"
 NEWFILE="$HOME/Documents/$2.tex"
 FILEPATH=$(dirname "$NEWFILE")
 

@@ -99,6 +99,7 @@
 
 "MARKDOWN
 	autocmd FileType markdown map <F5> :w<CR> :!mdtolatexpdf %:p <CR><CR>
+	autocmd FileType markdown map <F6> : !evince (echo %:p \| sed 's/md$/pdf/') 2> /dev/null & <CR><CR>
 
 	autocmd Filetype markdown,rmd map <leader>w yiWi[<esc>Ea](<esc>pa)
 	autocmd Filetype markdown,rmd inoremap ,n ---<Enter><Enter>
