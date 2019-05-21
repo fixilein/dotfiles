@@ -1,6 +1,7 @@
-#!/bin/bash
-#TODO
+#!/bin/sh
 
+# TODO replace ifs with that
+# [ -f /etc/rc.local ] && echo "real file"
 if test "$#" -lt 2; then
          echo "Not enough arguments"
          exit 1
