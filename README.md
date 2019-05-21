@@ -1,9 +1,3 @@
----
-title: "dotfiles"
-author: "Felix Tröbinger"
-subtitle: "manjaro i3 rice"
-...
-
 ## Screenshots
 ![sc1](Pictures/screen1.png)
 ![sc2](Pictures/screen2.png)
