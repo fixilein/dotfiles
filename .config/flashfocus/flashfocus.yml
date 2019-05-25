@@ -41,13 +41,9 @@ flash-lone-windows: 'never'
 # window. The property is a tuple of the form (window-id, window-class). The
 # window-class is usually the name of the application, but not always.
 #
-# Say I'd like to set all 'termite' windows to 80% opacity but leave other
-# windows at full opacity:
-#
-# rules:
-#   - window-class: Termite
-#     default-opacity: 0.8
-#
+rules:
+   - window-class: URxvt
+     default-opacity: 0.9
 #
 # I also would prefer that firefox windows are not flashed on focus:
 #

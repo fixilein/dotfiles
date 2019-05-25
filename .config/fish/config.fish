@@ -1,6 +1,7 @@
 function fish_greeting
 	cat ~/.cache/wal/sequences &
 	neofetch --disable theme icons --disable resolution --color_blocks off
+#	neofetch --disable theme icons --disable resolution --color_blocks off --ascii_distro arch --ascii_bold on
 #	fortune -s -o | sponge | cowsay | lolcat
 	#fish_vi_key_bindings
 end
