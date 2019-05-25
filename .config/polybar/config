@@ -1,5 +1,4 @@
-;==========================================================
-;
+;========================================================== ;
 ;
 ;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
 ;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
@@ -61,7 +60,7 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = i3 xwindow
 modules-center = music
-modules-right = updates-arch alsa backlight battery date
+modules-right = updates-arch alsa battery date
 
 tray-position = right
 tray-detached = false
