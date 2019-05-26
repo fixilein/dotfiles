@@ -3,13 +3,13 @@
 ## @@@@@@@@@@@@@@@@@@@@@@
 
 # Opacity of window during flash.
-flash-opacity: 0.6
+flash-opacity: 0.7
 
 # Windows are restored to this opacity value at the end of a flash.
 default-opacity: 1
 
 # Length of flash in milliseconds.
-time: 500
+time: 400
 
 # If true, flashes are not faded out. This will improve performance but flashes
 # won't be smooth.
@@ -32,7 +32,7 @@ flash-on-focus: true
 #      another window was just closed. 
 #   'on_switch':
 #      Lone windows will be flashed only upon switching desktops.
-flash-lone-windows: 'on_open_close'
+flash-lone-windows: 'always'
 
 # Defining window-specific flash rules
 #

@@ -122,10 +122,9 @@ bindsym $mod+Shift+Right move right
 
 # workspace back and forth (with/without active container)
 workspace_auto_back_and_forth yes
-bindsym $mod+b workspace back_and_forth
-bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_and_forth
 
 bindsym $mod+Tab workspace back_and_forth 
+bindsym $mod+Shift+Tab move container to workspace back_and_forth; workspace back_and_forth
 
 bindsym $mod+v exec --no-startup-id flash_window
 
@@ -326,6 +325,7 @@ exec_always --no-startup-id wal -R -q
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # exec --no-startup-id nitrogen --restore; sleep 1; compton -b -f
 exec --no-startup-id compton -b -f
+exec_always --no-startup-id flashfocus
 # exec --no-startup-id manjaro-hello
 exec --no-startup-id nm-applet #network manager
 exec --no-startup-id xfce4-power-manager
@@ -342,7 +342,6 @@ exec_always --no-startup-id fix_xcursor
 exec --no-startup-id i3-battery-popup -L 15 
 exec_always --no-startup-id ~/.config/polybar/launch.sh 
 exec --no-startup-id insync start
-exec_always --no-startup-id flashfocus
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
