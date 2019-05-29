@@ -1,9 +1,9 @@
 #!/bin/bash
 for file in *.pdf
 do
-	pdfinfo "$file" | grep "Pages" | awk '{print $2}' >> /tmp/slides.txt
+	pdfinfo "$file" | grep "Pages" | awk '{print $2}' >> /tmp/pgs
 done
 
-awk '{ sum += $1 } END { print sum }' /tmp/slides.txt 
-rm /tmp/slides.txt
+awk '{ sum += $1 } END { print sum }' /tmp/pgs 
+rm /tmp/pgs
 

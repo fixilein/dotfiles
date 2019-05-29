@@ -1,7 +1,7 @@
 ## Screenshots
 ![sc1](Pictures/screen1.png)
-![sc5](Pictures/screen5.png)
 ![sc2](Pictures/screen2.png)
+![sc3](Pictures/screen3.png)
 
 
 ## Configs for

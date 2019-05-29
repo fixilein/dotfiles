@@ -169,7 +169,7 @@ bindsym $mod+Ctrl+Left workspace prev
 # something like: set $ws1 1:mail
 #                 set $ws2 2:
 set $ws1 "1"
-#
+# "
 set $ws2 "2"
 #"
 set $ws3 "3"
@@ -342,6 +342,7 @@ exec_always --no-startup-id fix_xcursor
 exec --no-startup-id i3-battery-popup -L 15 
 exec_always --no-startup-id ~/.config/polybar/launch.sh 
 exec --no-startup-id insync start
+exec_always --no-startup-id unclutter --timeout 3 --ignore-scrolling -b
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
@@ -411,7 +412,7 @@ bindsym $mod+Shift+g gaps inner all set 0
 # gaps outer all plus 5
 
 # Smart gaps (gaps used if only more than one container on the workspace)
-smart_gaps on
+smart_gaps off
 
 # Smart borders (draw borders around container only if it is not the only container on this workspace) 
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)

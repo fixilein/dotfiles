@@ -114,3 +114,5 @@
 	autocmd Filetype markdown inoremap ,3 ###<Space><Enter><++><Esc>kA
 	autocmd Filetype markdown inoremap ,l --------<Enter>
 
+	autocmd Filetype markdown map <F8> :! cplastscr<CR><CR>
+
