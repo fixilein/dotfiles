@@ -1,6 +1,5 @@
 ## Screenshots
 ![sc1](Pictures/screen1.png)
-![sc2](Pictures/screen2.png)
 ![sc3](Pictures/screen3.png)
 
 
@@ -21,3 +20,6 @@
 ![Wallpaper](https://unsplash.com/photos/KT3WlrL_bsg/download?force=true)
 https://unsplash.com/photos/KT3WlrL_bsg
 
+
+![Wallpaper2](https://w.wallhaven.cc/full/lm/wallhaven-lm85eq.jpg)
+https://wallhaven.cc/w/lm85eq
