@@ -2,6 +2,7 @@
 ![sc1](Pictures/screen1.png)
 ![sc3](Pictures/screen3.png)
 
+---
 
 ## Configs for
 - i3 (window manager)

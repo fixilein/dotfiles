@@ -81,7 +81,7 @@ bindsym $mod+Shift+o exec --no-startup-id killall oneko
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
 bindsym $mod+c exec --no-startup-id google-chrome-stable 
 bindsym $mod+shift+c exec --no-startup-id google-chrome-stable --incognito
-# bindsym $mod+m exec --no-startup-id telegram_desktop
+bindsym $mod+m exec --no-startup-id telegram-desktop
 
 bindsym $mod+F3 exec pcmanfm
 # bindsym $mod+F3 exec terminal -e ranger
@@ -171,16 +171,14 @@ bindsym $mod+Ctrl+Left workspace prev
 set $ws1 "1"
 # "
 set $ws2 "2"
-#"
 set $ws3 "3"
 # "
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
-# "
-set $ws8 "8 "
-set $ws9 "9"
+set $ws8 "8"
+set $ws9 "9 "
 set $ws10 "10"
 
 # switch to workspace
@@ -224,7 +222,7 @@ bindsym $mod+Shift+0 move container to workspace $ws10; workspace $ws10
 # assign [class="TelegramDesktop"] $ws7
 # assign [class="Spotify"] $ws8
 # assign [class="Pcmanfm"] $ws3
-for_window [class="Spotify"] move to workspace $ws8
+# for_window [class="Spotify"] move to workspace $ws8
 
 
 # Open specific applications in floating mode
@@ -255,7 +253,8 @@ for_window [class="Xfburn"] floating enable
 for_window [class="Nm-connection-editor"] floating enable border none
 for_window [class="insync.py"] floating enable
 for_window [class="flameshot"] floating enable
-for_window [class="TelegramDesktop"] floating enable
+for_window [class="DrawApplication"] floating enable border normal
+# for_window [class="TelegramDesktop"] floating enable
 for_window [class="MATLAB R2018b - academic use"] floating enable
 for_window [class="Google-chrome"] border none
 for_window [class="Evince"] border none
@@ -329,7 +328,7 @@ exec_always --no-startup-id flashfocus
 # exec --no-startup-id manjaro-hello
 exec --no-startup-id nm-applet #network manager
 exec --no-startup-id xfce4-power-manager
-exec --no-startup-id pamac-tray
+# exec --no-startup-id pamac-tray
 # exec --no-startup-id clipit
 # exec --no-startup-id blueman-applet
 # exec_always --no-startup-id sbxkb
@@ -397,7 +396,7 @@ client.background       $bg
 #############################
 
 # Set inner/outer gaps
-set $gaps_inner 10
+set $gaps_inner 15
 set $gaps_outer 0
 
 gaps inner $gaps_inner 

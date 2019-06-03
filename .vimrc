@@ -32,6 +32,12 @@
 " Set leader to comma
 	let mapleader =","
 
+" Auto completing brackets
+	inoremap " ""<left>
+	inoremap ' ''<left>
+	inoremap ( ()<left>
+	inoremap [ []<left>
+	inoremap { {}<left>
 
 " Spell-check set to <leader>o, 'o' for 'orthography': by Luke Smith
 	map <leader>o :setlocal spell! spelllang=en_us<CR>

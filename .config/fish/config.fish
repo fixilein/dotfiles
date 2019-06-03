@@ -3,7 +3,7 @@ function fish_greeting
 #	neofetch --disable theme icons --disable resolution --color_blocks off
 	neofetch --ascii_distro arch --ascii_bold on
 #	fortune -s -o | sponge | cowsay | lolcat
-	#fish_vi_key_bindings
+	fish_vi_key_bindings
 end
 
 # add current directory . to PATH
