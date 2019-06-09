@@ -64,7 +64,7 @@ cursor-scroll = ns-resize
 [module/updates-arch]
 type = custom/script
 exec = ~/.config/polybar/updates-arch.sh
-interval = 600
+interval = 900
 
 [module/music]
 type = custom/script
@@ -150,6 +150,7 @@ index-sort = true
 pin-workspaces = true
 
 enable-scroll = false
+enable-click = false
 
 label-mode-padding = 2
 label-mode-foreground = #000

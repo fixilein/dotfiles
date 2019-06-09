@@ -45,10 +45,12 @@ rules:
    - window-class: URxvt
      default-opacity: 0.9
    - window-class: jetbrains-idea
-     default-opacity: 0.9
+     default-opacity: 0.95
    - window-class: jetbrains-studio
-     default-opacity: 0.9
+     default-opacity: 0.95
    - window-class: TelegramDesktop
+     default-opacity: 0.95
+   - window-class: Transmission-gtk
      default-opacity: 0.95
 #
 # I also would prefer that firefox windows are not flashed on focus:

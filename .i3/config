@@ -41,7 +41,7 @@ bindsym --release $mod+Print exec --no-startup-id flameshot gui
 bindsym --release $mod+Shift+Print exec --no-startup-id flameshot full -p ~/Pictures/screenshots
 
 # start program launcher
-bindsym $mod+d exec --no-startup-id rofi -show combi -sidebar-mode -lines 12 
+bindsym $mod+d exec --no-startup-id rofi -show run -sidebar-mode -lines 12 
 
 # launch categorized menu
 bindsym $mod+z exec --no-startup-id morc_menu
@@ -315,10 +315,10 @@ mode "resize" {
 }
 
 # Lock screen
-bindsym $mod+Ctrl+l exec --no-startup-id ~/.i3/lockscript
+bindsym Ctrl+Mod1+Delete exec --no-startup-id ~/.i3/lockscript
 
 # WALLPAPER
-exec_always --no-startup-id wal -R -q
+exec_always --no-startup-id wal -R -q -o "$HOME/.config/dunst/reload_dunst.sh"
 
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
