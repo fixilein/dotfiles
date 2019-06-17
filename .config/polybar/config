@@ -33,7 +33,7 @@ font-1 = FontAwesome
 
 modules-left = i3 
 modules-center = music
-modules-right = updates-arch volume battery2 network date
+modules-right = updates-arch volume battery network date
 separator = %{F#4a4a4a}|%{F-}
 
 tray-position = none
@@ -205,45 +205,7 @@ label-muted = v: -
 type = internal/network
 interface = wlp2s0
 format-connected = 
-label-disconnected = 
-
-[module/wlan]
-type = internal/network
-interface = wlp2s0
-interval = 3.0
-
-format-connected =wifi: <ramp-signal> <label-connected>
-; format-connected-underline = #9f78e1
-label-connected = %essid%
-
-format-disconnected = NO WIFI
-;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
-
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
-ramp-signal-foreground = ${colors.foreground-alt}
-
-[module/eth]
-type = internal/network
-interface = eno1
-interval = 3.0
-
-; format-connected-underline = #55aa55
-format-connected-prefix = " "
-format-connected-prefix-foreground = ${colors.foreground-alt}
-label-connected = %local_ip%
-
-format-disconnected =
-;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
+label-disconnected = -
 
 [module/date]
 type = internal/date
@@ -261,9 +223,7 @@ format-prefix-foreground = ${colors.foreground-alt}
 
 label = %date% %time%
 
-
-
-[module/battery2]
+[module/battery]
 type = internal/battery
 full-at = 98
 battery = BAT0
@@ -333,25 +293,6 @@ animation-charging-4 = 
 ; Framerate in milliseconds
 animation-charging-framerate = 500
 
-
-[module/battery]
-type = internal/battery
-battery = BAT0
-adapter = ADP1
-full-at = 98
-
-format-charging =b: <label-charging>
-;format-charging =b: <animation-charging> <label-charging>
-;format-charging-underline = #ffb52a
-
-format-discharging =b: <label-discharging>
-;format-discharging =b: <animation-discharging> <label-discharging>
-;format-discharging-underline = ${self.format-charging-underline}
-
-; format-full-prefix = " "
-format-full-prefix = "b:"
-format-full-prefix-foreground = ${colors.foreground-alt}
-;format-full-underline = ${self.format-charging-underline}
 
 [module/backlight]
 type = internal/backlight

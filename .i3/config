@@ -341,7 +341,8 @@ exec_always --no-startup-id fix_xcursor
 exec --no-startup-id i3-battery-popup -L 15 
 exec_always --no-startup-id ~/.config/polybar/launch.sh 
 exec --no-startup-id insync start
-exec_always --no-startup-id unclutter --timeout 3 --ignore-scrolling -b
+exec --no-startup-id redshift
+exec_always --no-startup-id unclutter --timeout 1 --ignore-scrolling -b
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
