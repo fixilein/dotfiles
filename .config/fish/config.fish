@@ -12,6 +12,9 @@ set -gx PATH $PATH ~/scripts
 
 alias yeet "yaourt --noconfirm"
 alias q "exit"
+alias weather "curl wttr.in" 
+alias please "sudo"
+alias fucking "sudo"
 
 function fish_user_key_bindings
     for mode in insert default visual

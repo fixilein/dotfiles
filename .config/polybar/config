@@ -33,10 +33,10 @@ font-1 = FontAwesome
 
 modules-left = i3 
 modules-center = music
-modules-right = updates-arch volume battery network date
+modules-right = updates-arch volume battery date
 separator = %{F#4a4a4a}|%{F-}
 
-tray-position = none
+tray-position = right
 tray-detached = false
 tray-padding = 2 
 tray-offset-x = 0

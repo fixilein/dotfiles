@@ -86,7 +86,6 @@ bindsym $mod+m exec --no-startup-id telegram-desktop
 bindsym $mod+F3 exec pcmanfm
 # bindsym $mod+F3 exec terminal -e ranger
 bindsym $mod+Shift+F3 exec gksu pcmanfm
-bindsym $mod+F5 exec terminal -e 'mocp'
 bindsym $mod+t exec --no-startup-id pkill compton
 bindsym $mod+Ctrl+t exec --no-startup-id compton -b -f
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
@@ -121,7 +120,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # workspace back and forth (with/without active container)
-workspace_auto_back_and_forth yes
+workspace_auto_back_and_forth no
 
 bindsym $mod+Tab workspace back_and_forth 
 bindsym $mod+Shift+Tab move container to workspace back_and_forth; workspace back_and_forth
@@ -178,8 +177,9 @@ set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
-set $ws9 "9 "
-set $ws10 "10"
+set $ws9 "9"
+set $ws10 "10 "
+set $ws11 "11 "
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -192,6 +192,7 @@ bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
+bindsym $mod+\ workspace $ws11
 
 # Move focused container to workspace
 bindsym $mod+Ctrl+1 move container to workspace $ws1
@@ -223,6 +224,8 @@ bindsym $mod+Shift+0 move container to workspace $ws10; workspace $ws10
 # assign [class="Spotify"] $ws8
 # assign [class="Pcmanfm"] $ws3
 # for_window [class="Spotify"] move to workspace $ws8
+assign [class="Transmission-gtk"] $ws11
+assign [class="Pcmanfm"] $ws11
 
 
 # Open specific applications in floating mode
@@ -251,14 +254,15 @@ for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
 
 for_window [class="Nm-connection-editor"] floating enable border none
-for_window [class="insync.py"] floating enable
+for_window [class="Insync"] floating enable
 for_window [class="flameshot"] floating enable
 for_window [class="DrawApplication"] floating enable border normal
 # for_window [class="TelegramDesktop"] floating enable
 for_window [class="MATLAB R2018b - academic use"] floating enable
 for_window [class="Google-chrome"] border none
 for_window [class="Evince"] border none
-for_window [class="vlc"] fullscreen enable
+for_window [class="Gpick"] floating enable
+for_window [title="^Android Emulator -"] floating enable
 
 
 # switch to workspace with urgent window automatically
@@ -303,11 +307,11 @@ mode "resize" {
         bindsym k resize shrink height 5 px or 5 ppt
         bindsym l resize grow width 5 px or 5 ppt
 
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+	# shift plus vim keys for faster resize
+        bindsym shift+h resize shrink width 25 px or 25 ppt
+        bindsym shift+j resize grow height 25 px or 25 ppt
+        bindsym shift+k resize shrink height 25 px or 25 ppt
+        bindsym shift+l resize grow width 25 px or 25 ppt
 
         # exit resize mode: Enter or Escape
         bindsym Return mode "default"
