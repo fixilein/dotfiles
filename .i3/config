@@ -37,7 +37,7 @@ bindsym $mod+Shift+q kill
 # SCREENSHOT
 # FLAMESHOT
 bindsym --release Print exec --no-startup-id flameshot full -c
-bindsym --release $mod+Print exec --no-startup-id flameshot gui
+bindsym --release $mod+Print exec --no-startup-id flameshot gui -p /tmp
 bindsym --release $mod+Shift+Print exec --no-startup-id flameshot full -p ~/Pictures/screenshots
 
 # start program launcher

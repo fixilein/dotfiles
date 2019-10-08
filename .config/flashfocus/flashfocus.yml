@@ -56,6 +56,8 @@ rules:
      default-opacity: 0.9
    - window-class: Emacs
      default-opacity: 0.9
+   - window-class: Code
+     default-opacity: 0.9
 #
 # I also would prefer that firefox windows are not flashed on focus:
 #
