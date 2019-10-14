@@ -7,6 +7,7 @@ SETUVAR __fish_init_3_x:\x1d
 SETUVAR _fish_abbr_brs:cd\x20/home/felix/Drive/FH/BRS/Assembly
 SETUVAR _fish_abbr_c:clear
 SETUVAR _fish_abbr_cd_2E_2E_:cd\x20\x2e\x2e
+SETUVAR _fish_abbr_dd:\x26\x20disown\x20\x25\x20exit
 SETUVAR _fish_abbr_h:systemctl\x20hibernate
 SETUVAR _fish_abbr_p:python
 SETUVAR _fish_abbr_pac:sudo\x20pacman\x20\x2dS

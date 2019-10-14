@@ -32,7 +32,8 @@ floating_modifier $mod
 bindsym $mod+Return exec "terminal"
 
 # kill focused window
-bindsym $mod+Shift+q kill
+# bindsym $mod+Shift+q kill
+bindsym $mod+q kill
 
 # SCREENSHOT
 # FLAMESHOT
@@ -41,7 +42,8 @@ bindsym --release $mod+Print exec --no-startup-id flameshot gui -p /tmp
 bindsym --release $mod+Shift+Print exec --no-startup-id flameshot full -p ~/Pictures/screenshots
 
 # start program launcher
-bindsym $mod+d exec --no-startup-id rofi -show run -sidebar-mode -lines 12 
+# bindsym $mod+d exec --no-startup-id rofi -show run -sidebar-mode -lines 12 
+bindsym Mod1+space exec --no-startup-id rofi -show run -sidebar-mode -lines 12 
 
 # launch categorized menu
 bindsym $mod+z exec --no-startup-id morc_menu
@@ -260,7 +262,7 @@ for_window [class="DrawApplication"] floating enable border normal
 # for_window [class="TelegramDesktop"] floating enable
 for_window [class="MATLAB R2018b - academic use"] floating enable
 for_window [class="Google-chrome"] border none
-for_window [class="Evince"] border none
+# for_window [class="Evince"] border none
 for_window [class="Gpick"] floating enable
 for_window [title="^Android Emulator -"] floating enable
 
