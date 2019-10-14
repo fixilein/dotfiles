@@ -132,15 +132,16 @@ bindsym $mod+v exec --no-startup-id flash_window
 # split orientation
 # bindsym $mod+h split h;exec notify-send 'tile horizontally'
 # bindsym $mod+v split v;exec notify-send 'tile vertically'
-bindsym $mod+q split toggle
+# bindsym $mod+q split toggle
+bindsym $mod+w split toggle
 
 # toggle fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+# bindsym $mod+s layout stacking
+# bindsym $mod+w layout tabbed
+# bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -418,7 +419,7 @@ bindsym $mod+Shift+g gaps inner all set 0
 # gaps outer all plus 5
 
 # Smart gaps (gaps used if only more than one container on the workspace)
-smart_gaps off
+# smart_gaps off
 
 # Smart borders (draw borders around container only if it is not the only container on this workspace) 
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
