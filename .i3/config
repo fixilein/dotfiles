@@ -228,7 +228,7 @@ bindsym $mod+Shift+0 move container to workspace $ws10; workspace $ws10
 # assign [class="Pcmanfm"] $ws3
 # for_window [class="Spotify"] move to workspace $ws8
 assign [class="Transmission-gtk"] $ws11
-assign [class="Pcmanfm"] $ws11
+# assign [class="Pcmanfm"] $ws11
 
 
 # Open specific applications in floating mode
@@ -262,7 +262,7 @@ for_window [class="flameshot"] floating enable
 for_window [class="DrawApplication"] floating enable border normal
 # for_window [class="TelegramDesktop"] floating enable
 for_window [class="MATLAB R2018b - academic use"] floating enable
-for_window [class="Google-chrome"] border none
+# for_window [class="Google-chrome"] border none
 # for_window [class="Evince"] border none
 for_window [class="Gpick"] floating enable
 for_window [title="^Android Emulator -"] floating enable

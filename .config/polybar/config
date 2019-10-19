@@ -9,6 +9,33 @@ primary = ${xrdb:color1:#222}
 secondary = ${xrdb:color2:#222}
 alert = ${xrdb:color3:#222}
 
+[bar/second]
+monitor = ${env:MONITOR:HDMI1}
+bottom = true
+width = 100%
+height = 25
+;offset-x = 1%
+;offset-y = 10%
+;radius = 0.0
+fixed-center = true 
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+border-size = 0 
+border-color = #00000000
+
+padding-left = 4
+padding-right = 4
+module-margin = 2
+
+font-0 = fixed:pixelsize=11
+font-1 = FontAwesome
+
+modules-left = i3 
+modules-center = 
+modules-right = updates-arch volume battery date
+separator = %{F#4a4a4a}|%{F-}
+
 [bar/bottom]
 monitor = ${env:MONITOR:eDP1}
 bottom = true
@@ -32,7 +59,7 @@ font-0 = fixed:pixelsize=11
 font-1 = FontAwesome
 
 modules-left = i3 
-modules-center = music
+modules-center = 
 modules-right = updates-arch volume battery date
 separator = %{F#4a4a4a}|%{F-}
 
