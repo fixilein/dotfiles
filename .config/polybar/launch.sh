@@ -7,5 +7,5 @@ killall -q polybar
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 # Launch bar
-polybar -r bottom
-# TODO launch the second bar too, if montoir is attached??
+polybar -r bottom &
+#polybar second &

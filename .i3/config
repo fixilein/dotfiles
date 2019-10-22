@@ -263,7 +263,7 @@ for_window [class="DrawApplication"] floating enable border normal
 # for_window [class="TelegramDesktop"] floating enable
 for_window [class="MATLAB R2018b - academic use"] floating enable
 # for_window [class="Google-chrome"] border none
-# for_window [class="Evince"] border none
+for_window [class="Evince"] border pixel 1
 for_window [class="Gpick"] floating enable
 for_window [title="^Android Emulator -"] floating enable
 
@@ -346,7 +346,8 @@ exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 
 exec --no-startup-id i3-battery-popup -L 15 
-exec_always --no-startup-id ~/.config/polybar/launch.sh 
+# exec_always --no-startup-id ~/.config/polybar/launch.sh 
+exec_always --no-startup-id ~/scripts/screen.sh 
 exec --no-startup-id insync start
 exec --no-startup-id redshift
 exec_always --no-startup-id unclutter --timeout 1 --ignore-scrolling -b
