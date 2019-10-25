@@ -184,6 +184,8 @@ set $ws9 "9"
 set $ws10 "10 "
 set $ws11 "11 "
 
+workspace $ws10 output HDMI1
+
 # switch to workspace
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
@@ -330,8 +332,8 @@ exec_always --no-startup-id wal -R -q -o "$HOME/.config/dunst/reload_dunst.sh"
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # exec --no-startup-id nitrogen --restore; sleep 1; compton -b -f
-exec --no-startup-id compton -b -f
-exec_always --no-startup-id flashfocus
+# exec --no-startup-id compton -b -f
+exec --no-startup-id flashfocus
 # exec --no-startup-id manjaro-hello
 exec --no-startup-id nm-applet #network manager
 exec --no-startup-id xfce4-power-manager
@@ -345,7 +347,7 @@ exec --no-startup-id xfce4-power-manager
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 
-exec --no-startup-id i3-battery-popup -L 15 
+# exec --no-startup-id i3-battery-popup -L 15 
 # exec_always --no-startup-id ~/.config/polybar/launch.sh 
 exec_always --no-startup-id ~/scripts/screen.sh 
 exec --no-startup-id insync start
