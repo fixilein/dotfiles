@@ -1,0 +1,64 @@
+#+TITLE: SEI Assignment 1, Questions
+#+AUTHOR: Felix Tröbinger
+#+OPTIONS: toc:nil
+* What are Optionals?
+In Swift Opionals are data types that either have a value or are /nil/, which means the variable doesn't have a value at all.
+For example a /String-Optional/ either has a value or it is /nil/. 
+
+The syntax for Optionals are the respective data type followed by a question mark. 
+
+#+begin_src swift
+var optionalString: String? = nil
+#+end_src
+With Optionals a Boolean, or more precisely an Optional Boolean, can actually have three values; /true/, /false/ and /nil/.
+
+This is done to remove the possibility of a /Null Pointer Exception/ that for instance in Java appear regularly. 
+
+To ensure an Optional has a value you do the following in code: 
+
+#+begin_src swift
+if let optionalString = optionalString {
+    // do something with optionalString
+    // if optionalString does not have a value, this will never be executed
+}
+#+end_src
+\pagebreak
+* What are Assertions and when would you use them?
+Assertions can be used for checking a specific state (for example the value of a variable) at runtime.
+The program will only continue to run, if the assertion is /true/. Otherwise the program will terminate.
+
+An example for an assertion would be: 
+#+begin_src swift
+assert(variable >= 0)
+#+end_src
+An Assertion can also have a error message. 
+#+begin_src swift
+assert(month <= 12, "There are only 12 months.")
+#+end_src
+
+* What are Type Aliases?
+With Type Aliases in Swift, you can basically use any word for existing data types. 
+In this example I want to use the word age instead of Integer (and to further demonstrate it, i used the German word).
+
+#+begin_src swift
+typealias Alter = Int
+var no:Alter = 18 
+#+end_src
+
+You can also call functions from the /"Alter"/ class, which will call the Integer functions. 
+
+#+begin_src swift
+print(Alter.max) // prints 9223372036854775807
+print(Alter.min) // prints -9223372036854775808
+#+end_src
+(This example obviously does not make much sense.) 
+
+* What is Operator overloading?
+Operator Overloading in Swift can be used to use existing operators (like *+*, ***, *-*, */*) to create operators for custom classes or to define new behaviour. 
+You can for example create an operator for Exponentiation (e.g. $2^8$) using operator overloading. 
+
+* What are Extensions and how to use them? Give one example.
+In Swift, Extensions are used to add new functionality to a class. 
+This is even possible, if you don't have access to the code of the class you are extending. 
+[[/home/felix/Drive/FH/SEI/Assignments/Excercise_1/questions.org_20191006_175731_bYCsSg.png]]
+#  LocalWords:  Optionals Opionals SEI

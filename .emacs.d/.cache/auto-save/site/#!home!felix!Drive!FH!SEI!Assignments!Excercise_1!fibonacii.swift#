@@ -1,0 +1,14 @@
+let n = 10
+var c = 0 // count 
+var f = 1
+var f1 = 1
+var f2 = 0
+
+while c < n{
+    f = f1 + f2
+    f2 = f1
+    f1 = f 
+
+    print(f)
+    c += 1
+}
