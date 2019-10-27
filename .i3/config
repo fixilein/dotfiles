@@ -348,7 +348,6 @@ exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 
 # exec --no-startup-id i3-battery-popup -L 15 
-# exec_always --no-startup-id ~/.config/polybar/launch.sh 
 exec_always --no-startup-id ~/scripts/screen.sh 
 exec --no-startup-id insync start
 exec --no-startup-id redshift

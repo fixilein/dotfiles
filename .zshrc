@@ -1,3 +1,8 @@
+#autostart
+(cat ~/.cache/wal/sequences &)
+# neofetch --disable theme icons --disable resolution --color_blocks off
+
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -68,7 +73,16 @@ ZSH_THEME="simple"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git
+         npm
+         vi-mode
+         docker
+         emacs
+         zsh-autosuggestions
+         colored-man-pages
+         colorize
+         )
+
 
 source $ZSH/oh-my-zsh.sh
 
@@ -93,9 +107,13 @@ source $ZSH/oh-my-zsh.sh
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+
 alias q="exit"
 alias r="ranger"
+alias yeet="yay"
+alias weather="curl wttr.in" 
+alias please="sudo"
+alias fucking="sudo"
+
+eval $(thefuck --alias)
+

@@ -33,7 +33,7 @@ font-1 = FontAwesome
 
 modules-left = i3 
 modules-center = 
-modules-right = updates-arch volume battery date
+modules-right = battery date
 separator = %{F#4a4a4a}|%{F-}
 
 [bar/bottom]
