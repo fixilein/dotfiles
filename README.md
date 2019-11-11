@@ -1,6 +1,5 @@
 ## Screenshots
-![sc1](Pictures/screen1.png)
-![sc3](Pictures/screen3.png)
+![sc1](screenshots/screenshot_1.png)
 
 ---
 
@@ -8,19 +7,11 @@
 - i3 (window manager)
 - compton (compositor)
 - Xresources
-- fish (shell) 
+- zsh
 - ranger (file manager)
 - polybar (status bar) 
 - rofi (application launcher)
 - vim
+- spacemacs
 - GIMP
 - some other configs and small scripts 
-
-
-## Wallpaper
-![Wallpaper](https://unsplash.com/photos/KT3WlrL_bsg/download?force=true)
-https://unsplash.com/photos/KT3WlrL_bsg
-
-
-![Wallpaper2](https://w.wallhaven.cc/full/lm/wallhaven-lm85eq.jpg)
-https://wallhaven.cc/w/lm85eq
