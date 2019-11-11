@@ -324,8 +324,9 @@ mode "resize" {
 }
 
 # Lock screen
-# bindsym Ctrl+Mod1+Delete exec --no-startup-id ~/.i3/lockscript
-bindsym Ctrl+Mod1+Delete exec --no-startup-id i3lock -u -i ~/.i3/bsod.png
+set $lockscreen "i3lock -u -i ~/.i3/bsod.png"
+# set $lockscreen "~/.i3/lockscript"
+bindsym Ctrl+Mod1+Delete exec --no-startup-id $lockscreen
 
 # WALLPAPER
 exec_always --no-startup-id wal -R -q -o "$HOME/.config/dunst/reload_dunst.sh"
@@ -344,7 +345,7 @@ exec --no-startup-id xfce4-power-manager
 # exec_always --no-startup-id sbxkb
 # exec --no-startup-id start_conky_maia
 # exec --no-startup-id start_conky_green
-# exec --no-startup-id xautolock -time 10 -locker blurlock
+exec --no-startup-id xautolock -time 10 -locker $lockscreen
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 
