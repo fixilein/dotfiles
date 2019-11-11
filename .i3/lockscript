@@ -2,7 +2,7 @@
 
 # scrot /tmp/screen.png
 # xwobf -s 5 -f /tmp/screen.png  
-xwobf -s 4 /tmp/screen.png  
-~/.i3/videoglitch /tmp/screen.png /tmp/screen2.png
-i3lock -u -i /tmp/screen2.png  
-rm /tmp/screen.png /tmp/screen2.png
+# xwobf -s 4 /tmp/screen.png  
+# ~/.i3/videoglitch /tmp/screen.png /tmp/screen2.png
+i3lock -u -i bsod.png
+# rm /tmp/screen.png /tmp/screen2.png

@@ -6,6 +6,10 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# Current Working directory to PATH
+export PATH=$PATH:.
+export PATH=$PATH:~/scripts/
+
 # Path to your oh-my-zsh installation.
 export ZSH="/home/felix/.oh-my-zsh"
 
@@ -14,6 +18,7 @@ export ZSH="/home/felix/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="simple"
+# ZSH_THEME="agnoster"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -77,10 +82,10 @@ plugins=(git
          npm
          vi-mode
          docker
-         emacs
          zsh-autosuggestions
          colored-man-pages
          colorize
+	 ssh-agent
          )
 
 
@@ -111,9 +116,14 @@ source $ZSH/oh-my-zsh.sh
 alias q="exit"
 alias r="ranger"
 alias yeet="yay"
-alias weather="curl wttr.in" 
+alias weather="curl wttr.in"
 alias please="sudo"
 alias fucking="sudo"
+alias emacsf='f=$(fzf) ; emacs ${f} & ; disown ; exit'
 
 eval $(thefuck --alias)
 
+# Bind Ctrl + Space to accept suggestion
+bindkey '^ ' autosuggest-accept
+
+flash_window
