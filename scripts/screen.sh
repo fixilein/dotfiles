@@ -1,4 +1,7 @@
 #!/bin/bash
+# Script that runs the required xrandr command according to displays connected.
+# It also starts polybar on the display(s) and restarts the compton compositor and flashfocus.
+# This script is called in the i3 config as an exec-always with no-startup-id.
 
 SC=$(xrandr | grep -sw 'connected' | wc -l)
 
