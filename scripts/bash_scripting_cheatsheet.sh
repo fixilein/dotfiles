@@ -6,7 +6,7 @@ echo ${variable}         # use variable
 urxvt -e "htop" &      # run command in new terminal window
 sleep 3                # sleep for three seconds
 
-# === dmenu === 
+# === dmenu ===
 
 myDir="/home/felix/scripts/"
 

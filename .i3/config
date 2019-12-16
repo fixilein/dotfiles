@@ -84,6 +84,7 @@ bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
 bindsym $mod+c exec --no-startup-id google-chrome-stable 
 bindsym $mod+shift+c exec --no-startup-id google-chrome-stable --incognito
 bindsym $mod+m exec --no-startup-id telegram-desktop
+bindsym $mod+e exec --no-startup-id emoji-keyboard -s
 
 bindsym $mod+F3 exec pcmanfm
 # bindsym $mod+F3 exec terminal -e ranger
@@ -303,10 +304,6 @@ mode "$mode_system" {
 bindsym $mod+r mode "resize"
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
         bindsym h resize shrink width 5 px or 5 ppt
         bindsym j resize grow height 5 px or 5 ppt
         bindsym k resize shrink height 5 px or 5 ppt
@@ -324,7 +321,7 @@ mode "resize" {
 }
 
 # Lock screen
-set $lockscreen "i3lock -u -i ~/.i3/bsod.png"
+set $lockscreen "i3lock -u -t -i ~/.i3/bsod.png"
 # set $lockscreen "~/.i3/lockscript"
 bindsym Ctrl+Mod1+Delete exec --no-startup-id $lockscreen
 
@@ -353,7 +350,7 @@ exec_always --no-startup-id fix_xcursor
 exec_always --no-startup-id ~/scripts/screen.sh 
 exec --no-startup-id insync start
 exec --no-startup-id redshift
-exec_always --no-startup-id unclutter --timeout 1 --ignore-scrolling -b
+exec --no-startup-id unclutter --timeout 1 --ignore-scrolling -b --jitter 1
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
@@ -408,7 +405,7 @@ client.background       $bg
 #############################
 
 # Set inner/outer gaps
-set $gaps_inner 7
+set $gaps_inner 4
 set $gaps_outer 0
 
 gaps inner $gaps_inner 
@@ -423,7 +420,7 @@ bindsym $mod+Shift+g gaps inner all set 0
 # gaps outer all plus 5
 
 # Smart gaps (gaps used if only more than one container on the workspace)
-# smart_gaps off
+# smart_gaps on
 
 # Smart borders (draw borders around container only if it is not the only container on this workspace) 
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)

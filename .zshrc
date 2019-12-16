@@ -1,7 +1,6 @@
 #autostart
 (cat ~/.cache/wal/sequences &)
-# neofetch --disable theme icons --disable resolution --color_blocks off
-
+#flash_window
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -17,7 +16,8 @@ export ZSH="/home/felix/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="simple"
+ZSH_THEME="juanghurtado"
+# ZSH_THEME="random"
 # ZSH_THEME="agnoster"
 
 # Set list of themes to pick from when loading at random
@@ -86,6 +86,8 @@ plugins=(git
          colored-man-pages
          colorize
 	 ssh-agent
+	 wd
+	 docker
          )
 
 
@@ -126,4 +128,4 @@ eval $(thefuck --alias)
 # Bind Ctrl + Space to accept suggestion
 bindkey '^ ' autosuggest-accept
 
-flash_window
+# neofetch --disable theme icons --disable resolution --color_blocks off
