@@ -32,5 +32,28 @@ matches:
         params:
           cmd: "echo -n Hello from your shell"
 
-  - trigger: ":img"
-    image_path: "/home/felix/Pictures/screen3.png"
+  - trigger: ":angery"
+    image_path: "/home/felix/Pictures/memes/angery.jpg"
+
+  - trigger: ":pikachu"
+    image_path: "/home/felix/Pictures/memes/pikachu.jpg"
+
+  - trigger: ":god"
+    image_path: "/home/felix/Pictures/memes/god.jpg"
+
+  - trigger: ":confused"
+    image_path: "/home/felix/Pictures/memes/confused_krabs.jpg"
+
+  - trigger: ":angry"
+    image_path: "/home/felix/Pictures/memes/angry.jpg"
+
+  - trigger: ":comeagain"
+    image_path: "/home/felix/Pictures/memes/come_again.jpg"
+
+  - trigger: ":awkward"
+    image_path: "/home/felix/Pictures/memes/awkward.jpg"
+
+  - trigger: ":hackerman"
+    image_path: "/home/felix/Pictures/memes/hackerman.jpg"
+  - trigger: ":ytho"
+    image_path: "/home/felix/Pictures/memes/ytho.jpg"
