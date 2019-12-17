@@ -76,7 +76,6 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q set Master 2dB+ unmu
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q set Master 2dB- unmute
 bindsym XF86AudioMute exec --no-startup-id amixer -q set Master toggle
 
-
 # Start Applications
 bindsym $mod+o exec --no-startup-id oneko -rv
 bindsym $mod+Shift+o exec --no-startup-id killall oneko
@@ -129,6 +128,9 @@ bindsym $mod+Tab workspace back_and_forth
 bindsym $mod+Shift+Tab move container to workspace back_and_forth; workspace back_and_forth
 
 bindsym $mod+v exec --no-startup-id flash_window
+
+# Automatic "fibonacci" tiling.
+for_window [class=".*"] split toggle
 
 # split orientation
 # bindsym $mod+h split h;exec notify-send 'tile horizontally'
