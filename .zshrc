@@ -122,6 +122,7 @@ alias weather="curl wttr.in"
 alias please="sudo"
 alias fucking="sudo"
 alias emacsf='f=$(fzf) ; emacs ${f} & ; disown ; exit'
+alias ydl="youtube-dl"
 
 eval $(thefuck --alias)
 

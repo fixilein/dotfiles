@@ -130,7 +130,7 @@ bindsym $mod+Shift+Tab move container to workspace back_and_forth; workspace bac
 bindsym $mod+v exec --no-startup-id flash_window
 
 # Automatic "fibonacci" tiling.
-for_window [class=".*"] split toggle
+# for_window [class=".*"] split toggle
 
 # split orientation
 # bindsym $mod+h split h;exec notify-send 'tile horizontally'
@@ -407,8 +407,8 @@ client.background       $bg
 #############################
 
 # Set inner/outer gaps
-set $gaps_inner 4
-set $gaps_outer 0
+set $gaps_inner 30 
+set $gaps_outer 0 
 
 gaps inner $gaps_inner 
 gaps outer $gaps_outer   
