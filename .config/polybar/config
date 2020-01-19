@@ -22,8 +22,8 @@ fixed-center = true
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-padding-left = 150
-padding-right = 150
+padding-left = 130
+padding-right = 130
 
 border-size = 12
 border-color = #00000000
@@ -34,8 +34,8 @@ font-0 = fixed:pixelsize=11
 font-1 = FontAwesome
 
 modules-left = i3 
-modules-center = 
-modules-right = battery date
+modules-center = music
+modules-right = network battery date
 separator = %{F#4a4a4a}|%{F-}
 
 [bar/bottom]
@@ -54,8 +54,8 @@ border-size = 12
 border-color = #00000000
 ; border-color = ${colors.background}
 
-padding-left = 150
-padding-right = 150
+padding-left = 130
+padding-right = 130
 module-margin = 2
 
 font-0 = fixed:pixelsize=11
@@ -63,7 +63,7 @@ font-1 = FontAwesome
 
 modules-left = i3 
 modules-center = 
-modules-right = updates-arch volume battery date
+modules-right = ping updates-arch volume battery date
 separator = %{F#4a4a4a}|%{F-}
 
 tray-position = center
@@ -90,6 +90,11 @@ cursor-scroll = ns-resize
 ;;;;;;;;;
 ;MODULES;
 ;;;;;;;;;
+
+[module/ping]
+type = custom/script
+exec = "ping -c 4 8.8.8.8 | tail -1| awk '{print $4}' | cut -d '/' -f 2"
+interval = 3
 
 [module/updates-arch]
 type = custom/script
@@ -178,6 +183,9 @@ index-sort = true
 
 ; Only show workspaces on the same output as the bar
 pin-workspaces = true
+
+; split the workspace name on ':'
+strip-wsnumbers = true
 
 enable-scroll = false
 enable-click = false
