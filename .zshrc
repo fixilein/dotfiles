@@ -118,11 +118,14 @@ source $ZSH/oh-my-zsh.sh
 alias q="exit"
 alias r="ranger"
 alias yeet="yay"
+alias yote="yay -R"
+alias yeeet="yay -S"
 alias weather="curl wttr.in"
 alias please="sudo"
 alias fucking="sudo"
 alias emacsf='f=$(fzf) ; emacs ${f} & ; disown ; exit'
 alias ydl="youtube-dl"
+alias gpu="optimus-manager"
 
 eval $(thefuck --alias)
 
