@@ -32,6 +32,12 @@ matches:
         params:
           cmd: "echo -n Hello from your shell"
 
+  - trigger: ":ayylmao"
+    replace: "https://www.youtube.com/watch?v=kiEqGhgWf5Y"
+
+  - trigger: ":rickroll"
+    replace: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+
   - trigger: ":angery"
     image_path: "/home/felix/Pictures/memes/angery.jpg"
 
