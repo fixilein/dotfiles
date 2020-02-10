@@ -126,6 +126,8 @@ alias fucking="sudo"
 alias emacsf='f=$(fzf) ; emacs ${f} & ; disown ; exit'
 alias ydl="youtube-dl"
 alias gpu="optimus-manager"
+alias gs="git status"
+alias b="br --sizes"
 
 eval $(thefuck --alias)
 
@@ -133,3 +135,10 @@ eval $(thefuck --alias)
 bindkey '^ ' autosuggest-accept
 
 # neofetch --disable theme icons --disable resolution --color_blocks off
+
+source /home/felix/.config/broot/launcher/bash/br
+
+# Insulter
+if [ -f /etc/bash.command-not-found ]; then
+    . /etc/bash.command-not-found
+fi

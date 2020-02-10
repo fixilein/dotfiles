@@ -5,7 +5,8 @@
 
 SC=$(xrandr | grep -sw 'connected' | wc -l)
 
-pkill polybar
+killall polybar
+pkill i3icons2
 polybar bottom &
 
 if test "$SC" -eq 1
@@ -25,5 +26,6 @@ pkill compton
 compton -f -b
 
 # start/restart flashfocus
-pkill flashfocus
-flashfocus &
+# pkill flashfocus
+# flashfocus &
+

@@ -22,8 +22,8 @@ fixed-center = true
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-padding-left = 130
-padding-right = 130
+padding-left = 50
+padding-right = 50
 
 border-size = 12
 border-color = #00000000
@@ -33,7 +33,7 @@ module-margin = 2
 font-0 = fixed:pixelsize=11
 font-1 = FontAwesome
 
-modules-left = i3 
+modules-left = i3
 modules-center = music
 modules-right = network battery date
 separator = %{F#4a4a4a}|%{F-}
@@ -54,16 +54,16 @@ border-size = 12
 border-color = #00000000
 ; border-color = ${colors.background}
 
-padding-left = 130
-padding-right = 130
+padding-left = 50
+padding-right = 50
 module-margin = 2
 
 font-0 = fixed:pixelsize=11
 font-1 = FontAwesome
 
-modules-left = i3 
+modules-left = i3 xwindow
 modules-center = 
-modules-right = ping updates-arch volume battery date
+modules-right = updates-arch volume battery date
 separator = %{F#4a4a4a}|%{F-}
 
 tray-position = center

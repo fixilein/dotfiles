@@ -34,6 +34,7 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
+     go
      octave
      shell-scripts
      yaml
