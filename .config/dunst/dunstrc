@@ -139,13 +139,13 @@
     # Print a notification on startup.
     # This is mainly for error detection, since dbus (re-)starts dunst
     # automatically after a crash.
-    startup_notification = false
+    startup_notification = true
     
     # dmenu path.
     dmenu = /usr/bin/dmenu -p dunst:
     
     # Browser for opening urls in context menu.
-    browser = palemoon
+    browser = /usr/bin/brave
 
     # Align icons left/right/off
     icon_position = left
@@ -176,7 +176,7 @@
     history = ctrl+mod4+h 
     
     # Context menu.
-    context = ctrl+mod1+c
+    context = ctrl+shift+.
 
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.

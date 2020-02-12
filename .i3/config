@@ -80,18 +80,19 @@ bindsym XF86AudioMute exec --no-startup-id amixer -q set Master toggle
 bindsym $mod+o exec --no-startup-id oneko -rv
 bindsym $mod+Shift+o exec --no-startup-id killall oneko
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
-bindsym $mod+c exec --no-startup-id google-chrome-stable 
-bindsym $mod+shift+c exec --no-startup-id google-chrome-stable --incognito
+#bindsym $mod+c exec --no-startup-id google-chrome-stable 
+bindsym $mod+c exec --no-startup-id brave
+#bindsym $mod+shift+c exec --no-startup-id google-chrome-stable --incognito
+bindsym $mod+shift+c exec --no-startup-id brave --incognito
 bindsym $mod+m exec --no-startup-id telegram-desktop
 bindsym $mod+e exec --no-startup-id emoji-keyboard -s
-bindsym $mod+Ctrl+c --no-startup-id spunge -c $(xclip -o)
+# bindsym $mod+Ctrl+c --no-startup-id spunge -c $(xclip -o)
 
 bindsym $mod+F3 exec pcmanfm
 # bindsym $mod+F3 exec terminal -e ranger
 bindsym $mod+Shift+F3 exec gksu pcmanfm
 bindsym $mod+t exec --no-startup-id pkill compton
 bindsym $mod+Ctrl+t exec --no-startup-id compton -b -f
-bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 
 # bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
