@@ -4,8 +4,9 @@
 # You can refer to the official documentation:
 # https://espanso.org/docs/
 
-# Matches are the substitution rules, when you type the "trigger" string
-# it gets replaced by the "replace" string.
+enable_passive: true
+passive_key: CTRL
+
 matches:
   # Simple text replacement
   - trigger: ":espanso"
@@ -13,6 +14,9 @@ matches:
 
   - trigger: ":name"
     replace: "Felix Tröbinger"
+
+  - trigger: ":serverip"
+    replace: "37.252.191.46"
 
   # Dates
   - trigger: ":date"
@@ -31,6 +35,30 @@ matches:
         type: shell
         params:
           cmd: "echo -n Hello from your shell"
+
+  - trigger: ":rev"
+    replace: "{{output}}"
+    passive_only: true
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo $0 | rev"
+          trim: true
+
+  - trigger: ":sponge"
+    replace: "{{output}}"
+    passive_only: true
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo $0 | spunge"
+          trim: true
+
+  - trigger: ":greet"
+    replace: "Hey $0$, how are you?\nIt's been a while!"
+    passive_only: true
 
   - trigger: ":ayylmao"
     replace: "https://www.youtube.com/watch?v=kiEqGhgWf5Y"
@@ -61,11 +89,16 @@ matches:
 
   - trigger: ":hackerman"
     image_path: "/home/felix/Pictures/memes/hackerman.jpg"
+
   - trigger: ":ytho"
     image_path: "/home/felix/Pictures/memes/ytho.jpg"
+
   - trigger: ":nice"
     image_path: "/home/felix/Pictures/memes/nice.png"
+
   - trigger: ":breckfast"
     image_path: "/home/felix/Pictures/memes/breckfast.jpg"
+
   - trigger: ":what"
     image_path: "/home/felix/Pictures/memes/what.png"
+

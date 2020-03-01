@@ -155,15 +155,15 @@
     hide_duplicate_count = false
 
     # Display indicators for URLs (U) and actions (A).
-    show_indicators = yes
+    show_indicators = no
 
     ### Icons ###
 
     # Align icons left/right/off
-    icon_position = off
+    icon_position = left
 
     # Scale larger icons down to this size, set to 0 to disable
-    max_icon_size = 32
+    max_icon_size = 64
 
     # Paths to default icons.
     icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
@@ -194,7 +194,7 @@
     # Define the class of the windows spawned by dunst
     class = Dunst
 
-    # Print a notification on startup.
+    # Print a notification on startup
     # This is mainly for error detection, since dbus (re-)starts dunst
     # automatically after a crash.
     startup_notification = true
@@ -237,7 +237,7 @@
     # * close_current: Close current notification.
     # * close_all: Close all notifications.
     mouse_left_click = do_action
-    mouse_middle_click = do_action
+    mouse_middle_click = close_all
     mouse_right_click = close_current
 
 # Experimental features that may or may not work correctly. Do not expect them
