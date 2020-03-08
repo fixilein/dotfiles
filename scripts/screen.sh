@@ -23,7 +23,7 @@ fi
 
 # restart compton
 pkill compton
-compton -f -b
+compton -b
 
 # start/restart flashfocus
 # pkill flashfocus

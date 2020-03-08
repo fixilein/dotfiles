@@ -15,6 +15,9 @@ matches:
   - trigger: ":name"
     replace: "Felix Tröbinger"
 
+  - trigger: ":mail"
+    replace: "felix.troebinger@gmail.com"
+
   - trigger: ":serverip"
     replace: "37.252.191.46"
 

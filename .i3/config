@@ -92,7 +92,7 @@ bindsym $mod+F3 exec pcmanfm
 # bindsym $mod+F3 exec terminal -e ranger
 bindsym $mod+Shift+F3 exec gksu pcmanfm
 bindsym $mod+t exec --no-startup-id pkill compton
-bindsym $mod+Ctrl+t exec --no-startup-id compton -b -f
+bindsym $mod+Ctrl+t exec --no-startup-id compton -b
 
 # bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
