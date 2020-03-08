@@ -20,3 +20,10 @@
 
 reload_dunst
 
+# reload spotify / spicetify theme
+spicetify update
+
+# update telgram theme
+# requires https://github.com/matgua/telegram-palette-gen
+~/.telegram-palette-gen/telegram-palette-gen --wal
+
