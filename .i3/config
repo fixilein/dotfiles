@@ -322,7 +322,7 @@ mode "resize" {
 
 # Lock screen
 # set $lockscreen "i3lock -u -t -i ~/.i3/bsod.png"
-set $lockscreen "~/.i3/lockscript.sh"
+set $lockscreen "~/scripts/lockscript.sh"
 bindsym Ctrl+Mod1+Delete exec --no-startup-id $lockscreen
 
 # WALLPAPER
@@ -348,6 +348,7 @@ exec_always --no-startup-id fix_xcursor
 
 # exec --no-startup-id i3-battery-popup -L 15 
 exec_always --no-startup-id ~/scripts/screen.sh 
+exec --no-startup-id ~/scripts/modmap/modmap.sh 
 exec --no-startup-id insync start
 exec --no-startup-id redshift
 exec --no-startup-id unclutter --timeout 1 --ignore-scrolling -b --jitter 1
