@@ -1,0 +1,27 @@
+#!/bin/sh
+
+# TODO replace ifs with that
+# [ -f /etc/rc.local ] && echo "real file"
+if test "$#" -lt 2; then
+         echo "Not enough arguments"
+         exit 1
+fi
+
+TEMPLATE="$HOME/Documents/md-templates/$1.md"
+NEWFILE="$HOME/Documents/$2.md"
+FILEPATH=$(dirname "$NEWFILE")
+
+if test ! -f "$TEMPLATE"; then
+        echo "No template with that name"
+        exit 2
+fi
+
+if test -f "$NEWFILE"; then
+        echo "file already exists"
+        exit 2
+fi
+
+mkdir "$FILEPATH"
+cp "$TEMPLATE" "$NEWFILE"
+vim "$NEWFILE"
+

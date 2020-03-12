@@ -1,0 +1,25 @@
+#!/bin/sh
+
+if test "$#" -lt 2; then
+	echo "Not enough arguments"
+	exit 1
+fi
+
+TEMPLATE="$HOME/Documents/latex-templates/$1.tex"
+NEWFILE="$HOME/Documents/$2.tex"
+FILEPATH=$(dirname "$NEWFILE")
+
+if test ! -f "$TEMPLATE"; then
+	echo "No template with that name"
+	exit 2
+fi
+
+if test -f "$NEWFILE"; then
+	echo "file already exists"
+	exit 2
+fi
+
+mkdir "$FILEPATH"
+cp "$TEMPLATE" "$NEWFILE"
+vim "$NEWFILE"
+
