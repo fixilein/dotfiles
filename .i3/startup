@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# AUTOSTARTING APPLICATIONS
+
+# usb auto mounting
+udiskie &
+
+insync start
+
+redshift & 
+
+unclutter --timeout 1 --ignore-scrolling -b --jitter 1
+
+
