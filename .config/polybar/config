@@ -11,7 +11,7 @@ secondary = ${xrdb:color2:#222}
 alert = ${xrdb:color3:#222}
 
 [bar/second]
-monitor = ${env:MONITOR:HDMI1}
+monitor = ${env:MONITOR:HDMI-1}
 bottom = true
 width = 100%
 height = 25
@@ -39,7 +39,7 @@ modules-right = network battery date
 separator = %{F#4a4a4a}|%{F-}
 
 [bar/bottom]
-monitor = ${env:MONITOR:eDP1}
+monitor = ${env:MONITOR:eDP-1}
 bottom = true
 width = 100%
 height = 25

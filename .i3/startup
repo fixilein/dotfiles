@@ -1,13 +1,21 @@
 #!/usr/bin/env bash
 # AUTOSTARTING APPLICATIONS
+# this script is called in the i3 config 
 
 # usb auto mounting
 udiskie &
 
+# google drive client
 insync start
 
+# red light filter
 redshift & 
 
+# hide mouse cursor on inactivity
 unclutter --timeout 1 --ignore-scrolling -b --jitter 1
 
+# bluetooth manager
+#blueman-applet &
 
+# espanso 
+espanso daemon & 
