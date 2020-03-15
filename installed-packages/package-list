@@ -126,6 +126,7 @@ i3-battery-popup-git r26.4b15592-1
 i3-gaps-rounded-git 4.16.1.r184.g00181678-2
 i3blocks 1.5-3
 i3icons2-git 20191008.b915b4a-1
+i3lock 2.12-1
 inetutils 1.9.4-8
 insync 3.0.31.40739-1
 intel-ucode 20191115-3
@@ -236,7 +237,7 @@ otf-san-francisco 1:1.0-5
 p7zip 16.02-5
 pa-applet 1.0.2-3
 pacman 5.2.1-4
-pamac-gtk 9.4.0rc4-2
+pamac-gtk 9.4.0rc4-3
 pandoc 2.9.2-35
 patch 2.7.6-8
 patchutils 0.3.4-3
@@ -296,6 +297,7 @@ systemd-sysvcompat 244.3-2
 tar 1.32-3
 teams 1.3.00.958-1
 telegram-desktop 1.9.14-2
+tensorflow 2.1.0-3
 terminus-font 4.48-1
 texinfo 6.7-2
 texlive-bibtexextra 2019.52577-1
@@ -363,6 +365,7 @@ virtualbox-guest-dkms 6.1.4-2
 virtualbox-guest-iso 6.1.4-1
 virtualbox-guest-utils 6.1.4-2
 virtualbox-host-dkms 6.1.4-2
+visual-paradigm-community 16.1-20200231
 visual-studio-code-bin 1.43.0-1
 vmware-keymaps 1.0-1
 volumeicon 0.5.1-4
