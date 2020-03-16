@@ -255,10 +255,13 @@ postman 7.18.0-1
 powertop 2.11-1
 procps-ng 3.3.15-2
 psmisc 23.3-2
+pycharm-professional 2019.3.3-1
 pygtk 2.24.0-8
 python-homeassistant-cli 0.7.0-1
 python-pip 19.3.1-1
 python-pywal 3.3.0-2
+python-tensorflow 2.1.0-3
+python37 3.7.7-2
 qt5-styleplugins 5.0.0.20170311-19
 qt5ct 0.41-2
 ranger 1.9.3.4.gd8c363c9-1

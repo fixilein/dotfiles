@@ -104,7 +104,7 @@ source $ZSH/oh-my-zsh.sh
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR='emacsclient -nc'
+  export EDITOR='emacsclient -nc -a=vim'
 fi
 
 # Compilation flags
@@ -117,7 +117,8 @@ fi
 
 alias q="exit"
 alias r="ranger"
-alias ema="emacsclient -nc"
+# use $EDITOR as editor
+alias e="eval $EDITOR"
 alias yeet="yay"
 alias yote="yay -R"
 alias yeeet="yay -S"
