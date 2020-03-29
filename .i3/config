@@ -54,7 +54,7 @@ bindsym $mod+z exec --no-startup-id morc_menu
 
 #exec --no-startup-id volumeicon
 #bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
-exec --no-startup-id pulseaudio
+# exec --no-startup-id pulseaudio
 exec --no-startup-id pa-applet
 bindsym $mod+Ctrl+m exec pavucontrol
 
@@ -326,10 +326,8 @@ mode "resize" {
 set $lockscreen "~/scripts/lockscript.sh"
 bindsym Ctrl+Mod1+Delete exec --no-startup-id $lockscreen
 
-# WALLPAPER
-exec_always --no-startup-id wal -R -q -o "$HOME/scripts/pywal_reload.sh"
-
 # Autostart applications
+exec --no-startup-id ~/.i3/startup.sh
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # exec --no-startup-id nitrogen --restore; sleep 1; compton -b -f
 # exec --no-startup-id compton -b -f
@@ -342,16 +340,13 @@ exec --no-startup-id xfce4-power-manager
 # exec_always --no-startup-id sbxkb
 # exec --no-startup-id start_conky_maia
 # exec --no-startup-id start_conky_green
-exec --no-startup-id xautolock -time 10 -locker $lockscreen
+# exec --no-startup-id xautolock -time 10 -locker $lockscreen
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 
 # exec --no-startup-id i3-battery-popup -L 15 
 exec_always --no-startup-id ~/scripts/screen.sh 
 exec --no-startup-id ~/scripts/modmap/modmap.sh 
-exec --no-startup-id insync start
-exec --no-startup-id redshift
-exec --no-startup-id unclutter --timeout 1 --ignore-scrolling -b --jitter 1
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:

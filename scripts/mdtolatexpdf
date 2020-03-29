@@ -1,6 +1,0 @@
-#!/bin/bash
-
-FILE="$1"
-FILEPDF=$(echo "$FILE" | sed 's/md$/pdf/')
-pandoc "$FILE" -f markdown -t latex -o "$FILEPDF" --template eisvogel --listings
-

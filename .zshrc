@@ -117,15 +117,18 @@ fi
 
 alias q="exit"
 alias r="ranger"
+alias config='eval $EDITOR $(find ~/rice -type f -not -iwholename "*.git*" | fzf) ; exit'
+
 # use $EDITOR as editor
 alias e="eval $EDITOR"
 alias yeet="yay"
 alias yote="yay -R"
 alias yeeet="yay -S"
+alias u="pacman -Qe > ~/rice/installed-packages/package-list"
 alias weather="curl wttr.in"
 alias please="sudo"
 alias fucking="sudo"
-alias emacsf='f=$(fzf) ; emacs ${f} & ; disown ; exit'
+alias ff='f=$(fzf) ; e ${f} & ; disown ; exit'
 alias ydl="youtube-dl"
 alias gpu="optimus-manager"
 alias gs="git status"
@@ -137,6 +140,9 @@ eval $(thefuck --alias)
 bindkey '^ ' autosuggest-accept
 
 # neofetch --disable theme icons --disable resolution --color_blocks off
+# neofetch --ascii "$(fortune | cowsay)"
+# neofetch --w3m ~/Pictures/Wallpapers_Worth_Saving/wallhaven-132789.jpg
+
 
 source /home/felix/.config/broot/launcher/bash/br
 

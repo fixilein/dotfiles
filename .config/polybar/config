@@ -223,7 +223,7 @@ label-separator = " "
 
 
 [module/volume]
-type = internal/alsa
+type = internal/pulseaudio
 
 format-volume = <ramp-volume> <label-volume>
 ;format-volume = v: <label-volume> 

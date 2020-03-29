@@ -27,3 +27,17 @@ elif [ "$choice" == ${arr[1]} ]; then
 fi
 
 emacs ${myDir}${choice} # use choice
+
+# use second argument, if it does not exists use 5
+NUM ="${2:-5}"
+
+# command1 && command2
+# command 2 is only run when command1 succeeds
+# command1 || command2 
+# command 2 is only run when command1 fails
+
+
+# single line if statement 
+[ -z "$EDITOR" ] && EDITOR=nano
+# man test to see available flags
+

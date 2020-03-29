@@ -2,23 +2,30 @@
 # AUTOSTARTING APPLICATIONS
 # this script is called in the i3 config
 
+# touchpad gestures
+libinput-gestures-setup start
+
 # usb auto mounting
 udiskie &
 
 # red light filter
 redshift &
 
+telegram-desktop -startintray
+
 # hide mouse cursor on inactivity
-unclutter --timeout 1 --ignore-scrolling -b --jitter 1
+unclutter --timeout 3 --ignore-scrolling -b --jitter 1
 
-# bluetooth manager
-#blueman-applet &
+# blueman without tray ??
 
-# espanso
-espanso daemon &
+# espanso daemon &
 
-# emacs daemon
 emacs --daemon
 
 # google drive client
 insync start
+
+killall pulseaudio ; pulseaudio &
+
+# scrolling
+imwheel &
