@@ -11,10 +11,10 @@ udiskie &
 # red light filter
 redshift &
 
-telegram-desktop -startintray
+telegram-desktop -startintray &
 
 # hide mouse cursor on inactivity
-unclutter --timeout 3 --ignore-scrolling -b --jitter 1
+# unclutter --timeout 3 --ignore-scrolling -b --jitter 1
 
 # blueman without tray ??
 
@@ -27,5 +27,3 @@ insync start
 
 killall pulseaudio ; pulseaudio &
 
-# scrolling
-imwheel &

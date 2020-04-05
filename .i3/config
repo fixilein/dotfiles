@@ -327,7 +327,7 @@ set $lockscreen "~/scripts/lockscript.sh"
 bindsym Ctrl+Mod1+Delete exec --no-startup-id $lockscreen
 
 # Autostart applications
-exec --no-startup-id ~/.i3/startup.sh
+exec --no-startup-id ~/.i3/startup
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # exec --no-startup-id nitrogen --restore; sleep 1; compton -b -f
 # exec --no-startup-id compton -b -f
