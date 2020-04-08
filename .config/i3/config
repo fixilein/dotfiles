@@ -43,7 +43,8 @@ bindsym --release $mod+Shift+Print exec --no-startup-id flameshot full -p ~/Pict
 
 # start program launcher
 # bindsym $mod+d exec --no-startup-id rofi -show run -sidebar-mode -lines 12 
-bindsym Mod1+space exec --no-startup-id rofi -show run -sidebar-mode -lines 12 
+# bindsym Mod1+space exec --no-startup-id rofi -show drun # -sidebar-mode -modi drun,window,ssh -lines 12 --enable-drun 
+bindsym Mod1+space exec --no-startup-id ~/.config/i3/rofi.sh
 
 # launch categorized menu
 bindsym $mod+z exec --no-startup-id morc_menu
@@ -55,27 +56,31 @@ bindsym $mod+z exec --no-startup-id morc_menu
 #exec --no-startup-id volumeicon
 #bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 # exec --no-startup-id pulseaudio
-exec --no-startup-id pa-applet
+# exec --no-startup-id pa-applet
 bindsym $mod+Ctrl+m exec pavucontrol
 
 ################################################################################################
-
-# Screen brightness controls
-bindsym XF86MonBrightnessUp exec --no-startup-id "xbacklight -inc 10"
-bindsym XF86MonBrightnessDown exec --no-startup-id "xbacklight -dec 10"
-
-
-# Media keys
-bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
-bindsym XF86AudioNext exec --no-startup-id playerctl next
-bindsym XF86AudioPrev exec --no-startup-id playerctl previous
-
 
 # Volume keys
 # ALSA
 #bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q -D pulse sset Master 5%+ unmute
 #bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q -D pulse sset Master 5%- unmute
 #bindsym XF86AudioMute exec --no-startup-id amixer -q set Master toggle
+
+# PULSE
+bindsym XF86AudioRaiseVolume exec --no-startup-id pulsemixer --change-volume +5
+bindsym XF86AudioLowerVolume exec --no-startup-id pulsemixer --change-volume -5 
+bindsym XF86AudioMute exec --no-startup-id pulsemixer --toggle-mute
+
+# Media keys
+bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
+bindsym XF86AudioNext exec --no-startup-id playerctl next
+bindsym XF86AudioPrev exec --no-startup-id playerctl previous
+
+# Screen brightness controls
+bindsym XF86MonBrightnessUp exec --no-startup-id "xbacklight -inc 10"
+bindsym XF86MonBrightnessDown exec --no-startup-id "xbacklight -dec 10"
+
 
 # Start Applications
 bindsym $mod+o exec --no-startup-id oneko -rv
@@ -159,7 +164,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+Shift+s sticky toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+# bindsym $mod+a focus parent
 
 # move the currently focused window to the scratchpad
 bindsym $mod+Shift+minus move scratchpad
@@ -189,7 +194,7 @@ set $ws8 "8:VIII"
 set $ws9 "9:IX"
 set $ws0 "10:X"
 
-workspace $ws0 output HDMI1
+workspace $ws0 output HDMI-1
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -243,7 +248,7 @@ for_window [title="File Transfer*"] floating enable
 for_window [class="Galculator"] floating enable border pixel 1
 for_window [class="GParted"] floating enable border normal
 for_window [class="Lightdm-settings"] floating enable
-for_window [class="Lxappearance"] floating enable sticky enable border normal
+for_window [class="Lxappearance"] floating enable border normal
 for_window [class="Manjaro-hello"] floating enable
 for_window [class="Manjaro Settings Manager"] floating enable border normal
 for_window [title="MuseScore: Play Panel"] floating enable
@@ -259,6 +264,7 @@ for_window [class="(?i)System-config-printer.py"] floating enable border normal
 for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
+for_window [class="SimpleScreenRecorder"] floating enable
 
 for_window [class="Nm-connection-editor"] floating enable border none
 for_window [class="Insync"] floating enable
@@ -322,16 +328,22 @@ mode "resize" {
 }
 
 # Lock screen
-# set $lockscreen "i3lock -u -t -i ~/.i3/bsod.png"
+# set $lockscreen "i3lock -u -t -i ~/.config/i3/bsod.png"
 set $lockscreen "~/scripts/lockscript.sh"
 bindsym Ctrl+Mod1+Delete exec --no-startup-id $lockscreen
 
+# WALLPAPER
+exec_always --no-startup-id wal -R -q -o "$HOME/scripts/pywal_reload.sh"
+
+
 # Autostart applications
-exec --no-startup-id ~/.i3/startup
+
+exec --no-startup-id ~/.config/i3/startup
+exec --no-startup-id ~/scripts/modmap/modmap.sh 
+
+exec_always --no-startup-id ~/scripts/screen.sh 
+
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-# exec --no-startup-id nitrogen --restore; sleep 1; compton -b -f
-# exec --no-startup-id compton -b -f
-# exec --no-startup-id manjaro-hello
 exec --no-startup-id nm-applet #network manager
 exec --no-startup-id xfce4-power-manager
 # exec --no-startup-id pamac-tray
@@ -340,13 +352,10 @@ exec --no-startup-id xfce4-power-manager
 # exec_always --no-startup-id sbxkb
 # exec --no-startup-id start_conky_maia
 # exec --no-startup-id start_conky_green
-# exec --no-startup-id xautolock -time 10 -locker $lockscreen
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 
 # exec --no-startup-id i3-battery-popup -L 15 
-exec_always --no-startup-id ~/scripts/screen.sh 
-exec --no-startup-id ~/scripts/modmap/modmap.sh 
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
@@ -402,8 +411,8 @@ client.unfocused        $tr     $tr     $tr  $tr       $tr
 #############################
 
 # Set inner/outer gaps
-set $gaps_inner 30 
-set $gaps_outer 0 
+set $gaps_inner 10
+set $gaps_outer 5
 
 gaps inner $gaps_inner 
 gaps outer $gaps_outer   
