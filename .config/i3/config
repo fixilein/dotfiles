@@ -338,7 +338,7 @@ exec_always --no-startup-id wal -R -q -o "$HOME/scripts/pywal_reload.sh"
 
 # Autostart applications
 
-exec --no-startup-id ~/.config/i3/startup
+exec --no-startup-id ~/scripts/startup
 exec --no-startup-id ~/scripts/modmap/modmap.sh 
 
 exec_always --no-startup-id ~/scripts/screen.sh 
@@ -411,8 +411,8 @@ client.unfocused        $tr     $tr     $tr  $tr       $tr
 #############################
 
 # Set inner/outer gaps
-set $gaps_inner 10
-set $gaps_outer 5
+set $gaps_inner 7
+set $gaps_outer 0
 
 gaps inner $gaps_inner 
 gaps outer $gaps_outer   
@@ -421,8 +421,8 @@ bindsym $mod+g gaps inner all set $gaps_inner
 bindsym $mod+Shift+g gaps inner all set 0 
 
 # ROUNDED CORNERS
-border_radius 7
-for_window [class="^.*"] border pixel 0
+border_radius 0
+for_window [class="^.*"] border pixel 4
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
 # gaps inner|outer current|all set|plus|minus <px>
@@ -430,9 +430,9 @@ for_window [class="^.*"] border pixel 0
 # gaps outer all plus 5
 
 # Smart gaps (gaps used if only more than one container on the workspace)
-smart_gaps off
+smart_gaps on
 
 # Smart borders (draw borders around container only if it is not the only container on this workspace) 
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
-smart_borders off
+smart_borders on
 

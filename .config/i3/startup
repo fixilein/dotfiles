@@ -16,11 +16,12 @@ telegram-desktop -startintray &
 # hide mouse cursor on inactivity
 # unclutter --timeout 3 --ignore-scrolling -b --jitter 1
 
-# blueman without tray ??
-
 # espanso daemon &
 
-emacs --daemon
+# emacs --daemon
+
+# bluetooth manager
+blueman-tray
 
 # google drive client
 insync start

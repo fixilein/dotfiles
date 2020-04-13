@@ -94,6 +94,7 @@ plugins=(git
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+export BROWSER=/usr/bin/brave
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -150,3 +151,4 @@ source /home/felix/.config/broot/launcher/bash/br
 if [ -f /etc/bash.command-not-found ]; then
     . /etc/bash.command-not-found
 fi
+

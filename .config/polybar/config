@@ -1,8 +1,8 @@
 [colors]
-background = #00000000 ; transparent 
+; background = #00000000 ; transparent 
 
 ; pywall colors
-; background = ${xrdb:color0:#222}
+background = ${xrdb:color0:#222}
 foreground = ${xrdb:color7:#222}
 background-alt =  ${xrdb:color1:#222}
 foreground-alt = ${xrdb:color7:#222}
@@ -22,10 +22,10 @@ fixed-center = true
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-padding-left = 50
-padding-right = 50
+padding-left = 0
+padding-right = 0
 
-border-size = 12
+border-size = 0
 border-color = #00000000
 
 module-margin = 2
@@ -40,7 +40,7 @@ separator = %{F#4a4a4a}|%{F-}
 
 [bar/bottom]
 monitor = ${env:MONITOR:eDP-1}
-bottom = true
+bottom = false
 width = 100%
 height = 25
 ; offset-x = 25%
@@ -50,27 +50,27 @@ fixed-center = true
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-border-size = 12
-border-color = #00000000
-; border-color = ${colors.background}
+border-size = 0
+; border-color = #00000000
+border-color = ${colors.background-alt}
 
-padding-left = 50
-padding-right = 50
+padding-left = 0
+padding-right = 0
 module-margin = 2
 
 font-0 = fixed:pixelsize=11
 font-1 = FontAwesome
 
-modules-left = i3 xwindow
-modules-center = 
-modules-right = updates-arch volume battery date
+modules-left = i3 bspwm xwindow
+modules-center = music
+modules-right = updates-arch volume battery date custom-spacing
 separator = %{F#4a4a4a}|%{F-}
 
-tray-position = center
+tray-position = right 
 tray-detached = false
-tray-padding = 2 
+tray-padding = 1
 tray-offset-x = 0
-tray-scale = 0.9
+tray-scale = 1
 tray-background = ${colors.background}
 
 ;wm-restack = bspwm
@@ -90,6 +90,10 @@ cursor-scroll = ns-resize
 ;;;;;;;;;
 ;MODULES;
 ;;;;;;;;;
+
+[module/custom-spacing]
+type = custom/script
+exec = "echo ' '"
 
 [module/ping]
 type = custom/script
@@ -330,7 +334,6 @@ animation-charging-3 = 
 animation-charging-4 = 
 ; Framerate in milliseconds
 animation-charging-framerate = 500
-
 
 [module/backlight]
 type = internal/backlight
