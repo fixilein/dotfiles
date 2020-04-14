@@ -4,6 +4,7 @@
 ---
 
 ## Configs for
+- bspwm (window manager)
 - i3 (window manager)
 - compton (compositor)
 - Xresources
@@ -14,4 +15,5 @@
 - vim
 - spacemacs
 - GIMP
+- espanso
 - some other configs and small scripts 
