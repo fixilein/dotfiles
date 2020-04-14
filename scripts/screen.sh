@@ -31,5 +31,5 @@ compton -b
 # flashfocus &
 
 # reset wallpaper
-wal -R -q
+wal -R -q -o ~/scripts/pywal_reload.sh
 

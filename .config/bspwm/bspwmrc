@@ -1,0 +1,46 @@
+#! /bin/sh
+# BSWPWM CONFIG SCRIPT
+
+# clear rules
+bspc rule -r "*"
+
+# start hotkey daemon
+sxhkd &
+
+# fix IntelliJ and other JetBrains or Java Applications
+wmname LG3D
+
+sh ~/scripts/screen.sh
+sh ~/scripts/startup
+sh ~/scripts/modmap/modmap.sh
+
+bspc monitor eDP-1 -d 1 2 3 4 5 6 7
+bspc monitor HDMI-1 -d 8 9 0
+bspc monitor eDP-1 -s HDMI-1
+
+bspc config border_width 2
+bspc config window_gap 7
+
+# "smart gaps"
+bspc config single_monocle true
+bspc config gapless_monocle true
+
+# pywal colors are loaded in pywal_reload.sh 
+
+bspc config focus_follows_pointer true
+
+bspc rule -a mpv state=fullscreen
+
+# bspc rule -a "*" state=pseudo_tiled # all windows pseudo tiling
+bspc rule -a URxvt state=pseudo_tiled
+bspc rule -a Pcmanfm state=pseudo_tiled
+bspc rule -a TelegramDesktop state=pseudo_tiled
+bspc rule -a Pavucontrol state=pseudo_tiled
+bspc rule -a Insync state=pseudo_tiled
+
+# sample rules
+# bspc rule -a Gimp desktop='^8' state=floating follow=on
+# bspc rule -a Chromium desktop='^2'
+# bspc rule -a mplayer2 state=floating
+# bspc rule -a Kupfer.py focus=on
+# bspc rule -a Screenkey manage=off

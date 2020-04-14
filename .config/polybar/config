@@ -19,8 +19,11 @@ height = 25
 ;offset-y = 10%
 ;radius = 0.0
 fixed-center = true 
-background = ${colors.background}
+#background = ${colors.background}
+background = #00000000
 foreground = ${colors.foreground}
+
+wm-restack = bspwm
 
 padding-left = 0
 padding-right = 0
@@ -33,7 +36,7 @@ module-margin = 2
 font-0 = fixed:pixelsize=11
 font-1 = FontAwesome
 
-modules-left = i3
+modules-left = i3 bspwm
 modules-center = music
 modules-right = network battery date
 separator = %{F#4a4a4a}|%{F-}
@@ -42,7 +45,7 @@ separator = %{F#4a4a4a}|%{F-}
 monitor = ${env:MONITOR:eDP-1}
 bottom = false
 width = 100%
-height = 25
+height = 27
 ; offset-x = 25%
 ; offset-y = 50%
 ;radius = 0.0
@@ -73,10 +76,10 @@ tray-offset-x = 0
 tray-scale = 1
 tray-background = ${colors.background}
 
-;wm-restack = bspwm
+wm-restack = bspwm
 ;wm-restack = i3
 
-;override-redirect = true
+override-redirect = false
 
 ;scroll-up = bspwm-desknext
 ;scroll-down = bspwm-deskprev
@@ -163,21 +166,24 @@ label-unmounted-foreground = ${colors.foreground-alt}
 [module/bspwm]
 type = internal/bspwm
 
-label-focused = %index%
+label-focused = %name%
 label-focused-background = ${colors.background-alt}
 label-focused-underline= ${colors.primary}
 label-focused-padding = 2
 
-label-occupied = %index%
+label-occupied = %name%
 label-occupied-padding = 2
 
-label-urgent = %index%!
+label-urgent = %name%!
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 2
 
-label-empty = %index%
+label-empty = 
 label-empty-foreground = ${colors.foreground-alt}
 label-empty-padding = 2
+
+enable-click = false 
+enable-scroll = false
 
 
 [module/i3]
@@ -381,7 +387,7 @@ screenchange-reload = true
 ;pseudo-transparency = false
 
 [global/wm]
-margin-top = 5
-margin-bottom = 5
+margin-top = 0
+margin-bottom = 0
 
 ; vim:ft=dosini
