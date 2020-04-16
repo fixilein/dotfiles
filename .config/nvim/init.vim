@@ -31,8 +31,8 @@
 " enable mouse for scrolling
     set mouse=a
 
-" autocompletion ?
-" set wildmode=longest,list,full
+" autocompletion
+ set wildmode=longest,list,full
 
 " tab settings
     set tabstop=4
