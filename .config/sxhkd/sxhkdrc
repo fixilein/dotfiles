@@ -71,8 +71,8 @@ super + bracket{left,right}
 	bspc desktop -f {prev,next}.local
 
 # focus the last node/desktop
-# super + {grave,Tab}
-# 	bspc {node,desktop} -f last
+super + {asciicircum,Tab}
+    bspc {node,desktop} -f last
 
 # focus the older or newer node in the focus history
 super + {o,i}
@@ -85,7 +85,7 @@ super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} focused:'^{1-9,10}'
 
 # focus or send to the next monitor
-super + {_,shift + } Tab
+super + {_,shift + } ssharp
     bspc {monitor --focus next,node -m next --follow}
 
 
