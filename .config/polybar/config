@@ -14,13 +14,13 @@ alert = ${xrdb:color3:#222}
 monitor = ${env:MONITOR:HDMI-1}
 bottom = true
 width = 100%
-height = 25
+height = 27
 ;offset-x = 1%
 ;offset-y = 10%
 ;radius = 0.0
 fixed-center = true 
-#background = ${colors.background}
-background = #00000000
+background = ${colors.background}
+#background = #00000000
 foreground = ${colors.foreground}
 
 wm-restack = bspwm
@@ -37,7 +37,7 @@ font-0 = fixed:pixelsize=11
 font-1 = FontAwesome
 
 modules-left = i3 bspwm
-modules-center = music
+modules-center = 
 modules-right = network battery date
 separator = %{F#4a4a4a}|%{F-}
 
@@ -65,8 +65,8 @@ font-0 = fixed:pixelsize=11
 font-1 = FontAwesome
 
 modules-left = i3 bspwm xwindow
-modules-center = music
-modules-right = updates-arch volume battery date custom-spacing
+modules-center = 
+modules-right = updates-arch volume battery date
 separator = %{F#4a4a4a}|%{F-}
 
 tray-position = right 
@@ -107,6 +107,7 @@ interval = 3
 type = custom/script
 exec = ~/.config/polybar/updates-arch.sh
 interval = 900
+label = %{A1:urxvt -e zsh -ic yay:}%output%%{A}
 
 [module/music]
 type = custom/script
@@ -244,11 +245,6 @@ ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
 
-[module/alsa]
-type = internal/alsa
-format-volume =v: <label-volume>
-label-muted = v: -
-
 [module/network]
 type = internal/network
 interface = wlp2s0
@@ -262,7 +258,7 @@ interval = 1.0
 date =
 date-alt = " %d.%m.%y"
 
-time =%H:%M
+time = "%H:%M  "
 time-alt = %H:%M:%S
 
 ;format-prefix = 
@@ -387,7 +383,7 @@ screenchange-reload = true
 ;pseudo-transparency = false
 
 [global/wm]
-margin-top = 0
+margin-top = 0 
 margin-bottom = 0
 
 ; vim:ft=dosini

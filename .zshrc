@@ -1,16 +1,19 @@
-#autostart
+# pywal colors
 (cat ~/.cache/wal/sequences &)
-#flash_window
-
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Current Working directory to PATH
 export PATH=$PATH:.
 export PATH=$PATH:~/scripts/
 
+# export MANPATH="/usr/local/man:$MANPATH"
+export BROWSER=/usr/bin/brave
+export EDITOR='nvim'
+
 # Path to your oh-my-zsh installation.
 export ZSH="/home/felix/.oh-my-zsh"
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -20,12 +23,6 @@ ZSH_THEME="juanghurtado"
 # ZSH_THEME="random"
 # ZSH_THEME="agnoster"
 
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
-
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -33,26 +30,15 @@ ZSH_THEME="juanghurtado"
 # Case-sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
 
-# Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to automatically update without prompting.
-# DISABLE_UPDATE_PROMPT="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
+DISABLE_UPDATE_PROMPT="true"
 
-# Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS=true
-
-# Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
+
+DISABLE_AUTO_TITLE="true"
+
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -90,35 +76,20 @@ plugins=(git
 	 docker
          )
 
-
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-export BROWSER=/usr/bin/brave
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='emacsclient -nc -a=vim'
-fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='emacsclient -nc -a=vim'
+# fi
 
 alias q="exit"
 alias r="ranger"
-alias config='eval $EDITOR $(find ~/rice -type f -not -iwholename "*.git*" | fzf) ; exit'
+alias config='eval $EDITOR $(find ~/rice -type f -not -iwholename "*.git*" | fzf)'
 
 # use $EDITOR as editor
 alias e="eval $EDITOR"
@@ -134,16 +105,12 @@ alias ydl="youtube-dl"
 alias gpu="optimus-manager"
 alias gs="git status"
 alias b="br --sizes"
+alias vim="nvim"
 
 eval $(thefuck --alias)
 
 # Bind Ctrl + Space to accept suggestion
 bindkey '^ ' autosuggest-accept
-
-# neofetch --disable theme icons --disable resolution --color_blocks off
-# neofetch --ascii "$(fortune | cowsay)"
-# neofetch --w3m ~/Pictures/Wallpapers_Worth_Saving/wallhaven-132789.jpg
-
 
 source /home/felix/.config/broot/launcher/bash/br
 
@@ -151,4 +118,8 @@ source /home/felix/.config/broot/launcher/bash/br
 if [ -f /etc/bash.command-not-found ]; then
     . /etc/bash.command-not-found
 fi
+
+# neofetch --disable theme icons --disable resolution --color_blocks off
+# neofetch --ascii "$(fortune | cowsay)"
+# neofetch --w3m ~/Pictures/Wallpapers_Worth_Saving/wallhaven-132789.jpg
 
