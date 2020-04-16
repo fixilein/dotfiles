@@ -64,7 +64,7 @@ module-margin = 2
 font-0 = fixed:pixelsize=11
 font-1 = FontAwesome
 
-modules-left = i3 bspwm xwindow
+modules-left = i3 bspwm
 modules-center = 
 modules-right = updates-arch volume battery date
 separator = %{F#4a4a4a}|%{F-}
@@ -139,15 +139,15 @@ label-indicator-underline = ${colors.secondary}
 [module/cpu]
 type = internal/cpu
 interval = 2
-# format-prefix = " "
-format-prefix = "cpu: "
+format-prefix = " "
+# format-prefix = "cpu: "
 format-prefix-foreground = ${colors.foreground-alt}
 label = %percentage:2%%
 
 [module/memory]
 type = internal/memory
 interval = 2
-# format-prefix = " "
+# format-prefix = ""
 format-prefix = "ram: "
 format-prefix-foreground = ${colors.foreground-alt}
 label = %percentage_used%%
@@ -179,7 +179,7 @@ label-urgent = %name%!
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 2
 
-label-empty = 
+label-empty =
 label-empty-foreground = ${colors.foreground-alt}
 label-empty-padding = 2
 

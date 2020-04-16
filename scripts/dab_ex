@@ -1,0 +1,8 @@
+#!/bin/sh 
+# Sets the bspwm workspace up, ready for SQL Excercises! Yay!
+
+bspc node -t tiled
+bspc node -p east
+urxvt -e zsh -ic 'nvim ~/Drive/FH/DAB/Excercises/sql_excercises_solutions.txt' & disown
+evince  ~/Drive/FH/DAB/Excercises/sql-exercises.pdf 2> /dev/null & disown
+mysql -uroot -hlocalhost -p

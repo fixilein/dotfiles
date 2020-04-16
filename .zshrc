@@ -71,9 +71,8 @@ plugins=(git
          zsh-autosuggestions
          colored-man-pages
          colorize
-	 ssh-agent
-	 wd
-	 docker
+	     ssh-agent
+	     wd
          )
 
 source $ZSH/oh-my-zsh.sh
@@ -82,7 +81,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
+#   export EDITOR='nvim'
 # else
 #   export EDITOR='emacsclient -nc -a=vim'
 # fi
@@ -122,4 +121,5 @@ fi
 # neofetch --disable theme icons --disable resolution --color_blocks off
 # neofetch --ascii "$(fortune | cowsay)"
 # neofetch --w3m ~/Pictures/Wallpapers_Worth_Saving/wallhaven-132789.jpg
+pfetch
 

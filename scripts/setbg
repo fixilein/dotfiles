@@ -1,0 +1,5 @@
+#!/bin/sh
+# set first command line argument as wallpaper using pywal.
+
+wal -q -i $1 -o "$HOME/scripts/pywal_reload.sh"
+# cp -f $1 ~/Pictures/wallpaper.jpg

@@ -4,8 +4,7 @@
 # reset modmap
 setxkbmap
 
-# MANUAL
-# map CAPS LOCK to ESCAPE
+# MANUALY map CAPS LOCK to ESCAPE
 #xmodmap -e 'keycode 66 = Escape'
 # disable CAPS LOCK 
 #xmodmap -e 'clear lock'

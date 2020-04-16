@@ -9,7 +9,6 @@ ant 1.10.7-1
 arandr 0.1.10-4
 arch-wiki-man 1.3.0-1
 arduino 1:1.8.12-1
-artwork-i3 20190912-1
 asciiquarium 1.1-5
 aspell-de 20161207-2
 aspell-en 2018.04.16-1
@@ -36,12 +35,10 @@ bzip2 1.0.8-3
 cantarell-fonts 1:0.201-1
 ccstudio 9.3.0.00012-1
 clion 1:2020.1-1
-clipit 1:1.4.3-2
 cmatrix 2.0-1
 compton-tryone-git 0.1_beta2.95.g241bbc5-1
 cool-retro-term-git 1.1.0.r63.g64e007f-1
 coreutils 8.32-1
-cowfortune 0.1.2-6
 cpupower 5.6-1
 crda 4.14-3
 cronie 1.5.5-1
@@ -126,10 +123,8 @@ gzip 1.10-3
 haveged 1.9.8-1
 hexchat 2.14.3-1
 htop 2.2.0-3
-i3-battery-popup-git r26.4b15592-1
 i3-gaps-rounded-git 4.16.1.r184.g00181678-2
 i3blocks 1.5-3
-i3icons2-git 20191008.b915b4a-1
 i3lock 2.12-1
 icu48 4.8.1.1-3
 icu52 52.2-3
@@ -255,6 +250,7 @@ pcmanfm 1.3.1-2
 peda-git 1:1.1.101.7f673be-1
 perl 5.30.2-1
 perl-file-mimeinfo 0.29-2
+pfetch 0.6.0-1
 pkgconf 1.6.3-3
 polkit-gnome 0.105-4
 polybar 3.4.2-3
@@ -342,7 +338,6 @@ tomcat9 9.0.34-1
 touchegg 1.1.1-3
 touchegg-gce-git 1.1-4
 traceroute 2.1.0-5
-tree 1.8.0-1
 ttf-adobe-source-fonts 3.006R+3.001R+2.030R+ro+1.050R+it-3
 ttf-bitstream-vera 1.10-12
 ttf-dejavu 2.37-2
@@ -370,7 +365,6 @@ vi 1:070224-4
 vibrancy-icons-teal 2.7-1
 viewnior 1.7-2
 vim 8.2.0510-1
-vimiv-git r847.a39702b-1
 virtualbox 6.1.4-6
 virtualbox-ext-oracle 6.1.6-1
 virtualbox-guest-dkms 6.1.4-6
@@ -421,8 +415,6 @@ xorg-xprop 1.2.4-1
 xterm 353-1
 xwobf-git 0.r17.4ff96e3-1
 yay 9.4.6-1
-zathura 0.4.5-1
-zathura-pdf-mupdf 0.3.5-3
 zip 3.0-8
 zsh 5.8-1
 zsh-syntax-highlighting-git 0.6.0.r258.gbe3882a-1
