@@ -7,15 +7,21 @@ bspc rule -r "*"
 # start hotkey daemon
 sxhkd &
 
+# fix cursor 
+xsetroot -cursor_name left_ptr &
+
 # fix IntelliJ and other JetBrains or Java Applications
 wmname LG3D
 
-sh ~/scripts/screen.sh
+sh ~/scripts/screen.sh &
 sh ~/scripts/startup &
 sh ~/scripts/modmap/modmap.sh &
 
+bspc config remove_disabled_monitors true
+bspc config remove_unplugged_monitors true
+
 bspc config border_width 2
-bspc config window_gap 7
+bspc config window_gap 5
 
 bspc config top_padding 0
 bspc config bottom_padding 0
@@ -38,7 +44,5 @@ bspc rule -a Insync state=pseudo_tiled
 bspc rule -a Tlp-UI state=pseudo_tiled
 bspc rule -a SimpleScreenRecorder state=pseudo_tiled
 bspc rule -a Xfce4-power-manager-settings state=pseudo_tiled
-
-
-
+bspc rule -a Arandr state=pseudo_tiled
 

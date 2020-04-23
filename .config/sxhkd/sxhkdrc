@@ -22,6 +22,10 @@ super + Escape
 super + alt + {q,r}
 	bspc {quit,wm -r}
 
+# reload screen setup 
+super + shift + r
+    sh ~/scripts/screen.sh
+
 # close and kill
 super + {_,shift + }q
 	bspc node -{c,k}
@@ -133,19 +137,22 @@ super + {Left,Down,Up,Right}
 super + m 
 	telegram-desktop
 
-super + {_, shift +} b
+# web browser
+super + {_, shift +} w
 	brave { , --incognito}
 
-
+# screenshots
 Print
 	flameshot gui -p /tmp
 
 super + Print
 	flameshot full -c
 
+# pulseaudio control
 super + shift + m
 	pavucontrol
 
+# volume buttons
 XF86AudioLowerVolume
 	pulsemixer --change-volume -5
 
@@ -155,7 +162,20 @@ XF86AudioRaiseVolume
 XF86AudioMute 
 	pulsemixer --toggle-mute
 
+# brightness buttons
 XF86MonBrightnessDown
+    lux -s 10%
 
 XF86MonBrightnessUp
+    lux -a 10%
+
+# media buttons 
+XF86AudioPlay 
+    playerctl play-pause
+
+XF86AudioNext 
+    playerctl next
+
+XF86AudioPrev 
+    playerctl previous
 

@@ -1,3 +1,8 @@
+# neofetch --disable theme icons --disable resolution --color_blocks off
+# neofetch --ascii "$(fortune | cowsay)"
+# neofetch --w3m ~/Pictures/Wallpapers_Worth_Saving/wallhaven-132789.jpg
+pfetch
+
 # pywal colors
 (cat ~/.cache/wal/sequences &)
 
@@ -88,7 +93,7 @@ source $ZSH/oh-my-zsh.sh
 
 alias q="exit"
 alias r="ranger"
-alias config='eval $EDITOR $(find ~/rice -type f -not -iwholename "*.git*" | fzf)'
+alias rice='eval $EDITOR $(find ~/rice -type f -not -iwholename "*.git*" | fzf)'
 
 # use $EDITOR as editor
 alias e="eval $EDITOR"
@@ -108,6 +113,11 @@ alias vim="nvim"
 
 eval $(thefuck --alias)
 
+# auto cpmpletion (eg bspc)
+# (this adds quite some time to startup but it's awesome)
+autoload -U compinit
+compinit
+
 # Bind Ctrl + Space to accept suggestion
 bindkey '^ ' autosuggest-accept
 
@@ -118,8 +128,4 @@ if [ -f /etc/bash.command-not-found ]; then
     . /etc/bash.command-not-found
 fi
 
-# neofetch --disable theme icons --disable resolution --color_blocks off
-# neofetch --ascii "$(fortune | cowsay)"
-# neofetch --w3m ~/Pictures/Wallpapers_Worth_Saving/wallhaven-132789.jpg
-pfetch
 

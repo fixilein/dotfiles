@@ -8,7 +8,10 @@
 killall udiskie; udiskie &
 
 # red light filter
-killall redshift; redshift &
+# killall redshift; redshift &
+
+# atomatic screen brightness and temperature
+# killall clight; clight &
 
 telegram-desktop -startintray &
 
@@ -28,5 +31,5 @@ killall nm-applet ; nm-applet &
 # google drive client
 insync start &
 
-killall pulseaudio ; pulseaudio &
+pulseaudio &
 
