@@ -13,7 +13,7 @@ XTerm*faceName:          Fixed
 XTerm*faceSize:          11
 XTerm*reverseVideo:      on
 XTerm*selectToClipboard: true
-URxvt*geometry:          120x50
+URxvt*geometry:          130x60
 
 *background:                      #222D31
 *foreground:                      #d8d8d8

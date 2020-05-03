@@ -4,6 +4,7 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'junegunn/goyo.vim'
     Plug 'tpope/vim-surround'
     Plug 'tpope/vim-commentary'
+    Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 " enable line numbers
@@ -37,8 +38,12 @@ nnoremap S :%s//g<Left><Left>
 " enable mouse for scrolling and selecting text
 set mouse=a
 
-" autocompletion
+" auto-completion
 set wildmode=longest,list,full
+
+" spell checking
+set spelllang=en_us,de_de
+" set spell
 
 " tab settings
 set tabstop=4
@@ -56,7 +61,12 @@ set wildmenu
 if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 endif
-    
+
+" Git Gutter
+let g:gitgutter_enabled = 1
+let g:gitgutter_map_keys = 0
+let g:gitgutter_highlight_linenrs = 1
+
 " Auto completing brackets
 inoremap " ""<left>
 inoremap ' ''<left>
@@ -67,8 +77,8 @@ inoremap { {}<left>
 " Set leader to comma
 let mapleader =","
 
-" Spell-check set to <leader>o, 'o' for 'orthography': by Luke Smith
-map <leader>o :setlocal spell! spelllang=en_us<CR>
+" Toggle Spell-check, 'o' for 'orthography' (by Luke Smith)
+map <leader>o :setlocal spell!<CR>
 
 " Navigating with guides (by Luke Smith)
 inoremap <leader><leader> <Esc>/<++><Enter>"_c4l

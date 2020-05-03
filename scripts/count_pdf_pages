@@ -1,4 +1,5 @@
 #!/bin/bash
+# this was one of my first scripts, don't hate pls.
 for file in *.pdf
 do
 	pdfinfo "$file" | grep "Pages" | awk '{print $2}' >> /tmp/pgs

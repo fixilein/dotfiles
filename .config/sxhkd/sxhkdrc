@@ -141,6 +141,11 @@ super + m
 super + {_, shift +} w
 	brave { , --incognito}
 
+# browser fullscreen tiled
+#super + shift + f
+#    xdotool key F11
+# bspc node -t tiled
+
 # screenshots
 Print
 	flameshot gui -p /tmp

@@ -1,22 +1,24 @@
 #!/usr/bin/env bash
 # AUTOSTARTING APPLICATIONS
+# don't call this scripts twice in a session 
+# TODO check if already ran in session 
 
 # touchpad gestures
 # libinput-gestures-setup start
 
 # usb auto mounting
-killall udiskie; udiskie &
+udiskie &
 
 # red light filter
-# killall redshift; redshift &
+# redshift &
 
 # atomatic screen brightness and temperature
-# killall clight; clight &
+# clight &
 
 telegram-desktop -startintray &
 
 # hide mouse cursor on inactivity
-killall unclutter; unclutter --timeout 3 --ignore-scrolling -b --jitter 1
+unclutter --timeout 3 --ignore-scrolling -b --jitter 1
 
 # espanso daemon &
 
@@ -26,10 +28,12 @@ killall unclutter; unclutter --timeout 3 --ignore-scrolling -b --jitter 1
 blueman-tray &
 
 # network manager
-killall nm-applet ; nm-applet &
+nm-applet &
 
 # google drive client
 insync start &
 
-pulseaudio &
+# pulseaudio &
+
+xfce4-power-manager &
 

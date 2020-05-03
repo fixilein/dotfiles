@@ -7,7 +7,7 @@ pfetch
 (cat ~/.cache/wal/sequences &)
 
 # Current Working directory to PATH
-export PATH=$PATH:.
+# export PATH=$PATH:.
 export PATH=$PATH:~/scripts/
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -42,7 +42,7 @@ DISABLE_UPDATE_PROMPT="true"
 # DISABLE_LS_COLORS="true"
 # ENABLE_CORRECTION="true"
 
-DISABLE_AUTO_TITLE="true"
+# DISABLE_AUTO_TITLE="true"
 
 
 # Uncomment the following line to display red dots whilst waiting for completion.
