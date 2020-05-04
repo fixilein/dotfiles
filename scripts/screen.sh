@@ -35,6 +35,5 @@ compton &
 # pkill flashfocus
 # flashfocus &
 
-# reset wallpaper
-wal -R -q -o ~/scripts/pywal_reload.sh
+setgb
 

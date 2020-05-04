@@ -5,8 +5,9 @@
 
 if [ $# -eq 1 ]
   then
-    echo "ther is an arg"
     wal -q -i $1
+else
+    wal -R
 fi
 
 # Source generated colors.
@@ -18,7 +19,7 @@ bspc config active_border_color "$color2"
 bspc config focused_border_color "$color15"
 bspc config presel_feedback_color "$color1"
 
- reload_dunst() {
+reload_dunst() {
     pkill dunst
     dunst \
 	-frame_width 0 \
@@ -43,5 +44,5 @@ spicetify apply
 
 # IntelliJ Theme
 # requires https://github.com/0x6C38/intellijPywal
-sh ~/scripts/intellijPywal/intellijPywalGen.sh ~/.IntelliJIdea2019.3/config
+#sh ~/scripts/intellijPywal/intellijPywalGen.sh ~/.IntelliJIdea2019.3/config
 

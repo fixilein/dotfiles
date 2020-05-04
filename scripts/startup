@@ -33,7 +33,5 @@ nm-applet &
 # google drive client
 insync start &
 
-# pulseaudio &
-
 xfce4-power-manager &
 
