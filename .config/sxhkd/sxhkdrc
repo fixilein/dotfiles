@@ -8,7 +8,10 @@ super + Return
 
 # program launcher
 super + @space
-	rofi -show drun -sidebar-mode -modi drun,window,ssh -lines 12
+	rofi -show drun -sidebar-mode -modi drun,window,ssh -lines 12 -show-icons
+
+XF86Search
+   rofi -show run 
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -74,9 +77,9 @@ super + {_,shift + }c
 super + bracket{left,right}
 	bspc desktop -f {prev,next}.local
 
-# focus the last node/desktop
-super + {asciicircum,Tab}
-    bspc {node,desktop} -f last
+# focus the last desktop
+super + Tab
+    bspc desktop -f last
 
 # focus the older or newer node in the focus history
 super + {o,i}
@@ -89,7 +92,7 @@ super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} focused:'^{1-9,10}'
 
 # focus or send to the next monitor
-super + {_,shift + } ssharp
+super + {_,shift + } asciicircum
     bspc {monitor --focus next,node -m next --follow}
 
 
@@ -142,16 +145,18 @@ super + {_, shift +} w
 	brave { , --incognito}
 
 # browser fullscreen tiled
-#super + shift + f
-#    xdotool key F11
-# bspc node -t tiled
+# super + control + t
+#     xdotool key F11; bspc node -t tiled
 
-# screenshots
+# screenshots and screen recording
 Print
 	flameshot gui -p /tmp
 
 super + Print
 	flameshot full -c
+
+super + shift + Print 
+    simplescreenrecorder
 
 # pulseaudio control
 super + shift + m

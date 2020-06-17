@@ -35,5 +35,5 @@ compton &
 # pkill flashfocus
 # flashfocus &
 
-setgb
+setbg
 

@@ -15,7 +15,7 @@ wmname LG3D
 
 sh ~/scripts/screen.sh &
 sh ~/scripts/startup &
-sh ~/scripts/modmap/modmap.sh &
+# sh ~/scripts/modmap/modmap.sh &
 
 bspc config remove_disabled_monitors true
 bspc config remove_unplugged_monitors true

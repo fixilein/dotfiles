@@ -1,4 +1,5 @@
 #!/bin/sh
+# TODO change to current working directory
 
 if test "$#" -lt 2; then
 	echo "Not enough arguments"

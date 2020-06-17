@@ -68,11 +68,11 @@ let g:gitgutter_map_keys = 0
 let g:gitgutter_highlight_linenrs = 1
 
 " Auto completing brackets
-inoremap " ""<left>
-inoremap ' ''<left>
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap { {}<left>
+"inoremap " ""<left>
+"inoremap ' ''<left>
+"inoremap ( ()<left>
+"inoremap [ []<left>
+"inoremap { {}<left>
 
 " Set leader to comma
 let mapleader =","

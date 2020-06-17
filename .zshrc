@@ -100,7 +100,7 @@ alias e="eval $EDITOR"
 alias yeet="yay"
 alias yote="yay -R"
 alias yeeet="yay -S"
-alias u="pacman -Qe > ~/rice/installed-packages/package-list"
+alias u="pacman -Qe | awk '{print $1}' > ~/rice/installed-packages/package-list"
 alias weather="curl wttr.in"
 alias please="sudo"
 alias fucking="sudo"
@@ -110,6 +110,7 @@ alias gpu="optimus-manager"
 alias gs="git status"
 alias b="br --sizes"
 alias vim="nvim"
+alias v="nvim"
 
 eval $(thefuck --alias)
 
