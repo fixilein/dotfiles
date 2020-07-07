@@ -1,0 +1,19 @@
+#!/bin/sh
+# compile latex files
+
+file=$(readlink -f "$1")
+dir=$(dirname "$file")
+base="${file%.*}"
+
+cd "$dir" || exit
+
+textype() { \
+	pdflatex --output-directory="$dir" "$base" &&
+    bibtex "$base" &&
+	pdflatex --output-directory="$dir" "$base"
+	}
+
+case "$file" in
+	*\.tex) textype "$file" ;;
+	*\.md) pandoc "$file" --pdf-engine=xelatex -o "$base".pdf ;;
+esac

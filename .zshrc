@@ -1,7 +1,7 @@
 # neofetch --disable theme icons --disable resolution --color_blocks off
 # neofetch --ascii "$(fortune | cowsay)"
 # neofetch --w3m ~/Pictures/Wallpapers_Worth_Saving/wallhaven-132789.jpg
-pfetch
+ufetch
 
 # pywal colors
 (cat ~/.cache/wal/sequences &)
@@ -11,7 +11,7 @@ pfetch
 export PATH=$PATH:~/scripts/
 
 # export MANPATH="/usr/local/man:$MANPATH"
-export BROWSER=/usr/bin/brave
+export BROWSER=/usr/bin/google-chrome-stable
 export EDITOR='nvim'
 
 # Path to your oh-my-zsh installation.

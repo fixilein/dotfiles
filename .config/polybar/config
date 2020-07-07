@@ -67,7 +67,7 @@ font-1 = FontAwesome
 
 modules-left = bspwm xwindow
 modules-center = 
-modules-right = network updates-arch volume battery date
+modules-right = cpu network ping updates-arch volume battery date
 separator = %{F#4a4a4a}|%{F-}
 
 tray-position = right 
@@ -102,7 +102,8 @@ exec = "echo ' '"
 [module/ping]
 type = custom/script
 exec = "ping -c 4 8.8.8.8 | tail -1| awk '{print $4}' | cut -d '/' -f 2"
-interval = 3
+interval = 1
+label = %output% ms
 
 [module/updates-arch]
 type = custom/script
@@ -142,7 +143,7 @@ label-indicator-underline = ${colors.secondary}
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = " "
+# format-prefix = " "
 # format-prefix = "cpu: "
 format-prefix-foreground = ${colors.foreground-alt}
 label = %percentage:2%%
@@ -233,7 +234,7 @@ label-empty = %name%
 label-empty-foreground = #444
 label-empty-padding = 2
 
-enable-click = false 
+enable-click = true
 enable-scroll = false
 
 

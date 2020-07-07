@@ -142,7 +142,7 @@ super + m
 
 # web browser
 super + {_, shift +} w
-	brave { , --incognito}
+	google-chrome-stable { , --incognito}
 
 # browser fullscreen tiled
 # super + control + t
