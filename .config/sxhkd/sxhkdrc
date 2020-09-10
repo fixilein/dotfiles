@@ -26,8 +26,12 @@ super + alt + {q,r}
 	bspc {quit,wm -r}
 
 # reload screen setup 
-super + shift + r
+#super + shift + r
+super + alt + 1
     sh ~/scripts/screen.sh
+
+super + alt + 2
+    sh ~/scripts/screen.sh dock
 
 # close and kill
 super + {_,shift + }q

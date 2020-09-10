@@ -13,8 +13,8 @@ xsetroot -cursor_name left_ptr &
 # fix IntelliJ and other JetBrains or Java Applications
 wmname LG3D
 
-sh ~/scripts/screen.sh &
 sh ~/scripts/startup &
+sh ~/scripts/screen.sh &
 # sh ~/scripts/modmap/modmap.sh &
 
 bspc config remove_disabled_monitors true

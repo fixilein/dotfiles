@@ -8,7 +8,7 @@ ufetch
 
 # Current Working directory to PATH
 # export PATH=$PATH:.
-export PATH=$PATH:~/scripts/
+# export PATH=$PATH:~/scripts/
 
 # export MANPATH="/usr/local/man:$MANPATH"
 export BROWSER=/usr/bin/google-chrome-stable
@@ -24,7 +24,7 @@ export ZSH="/home/felix/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="juanghurtado"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 # ZSH_THEME="random"
 # ZSH_THEME="agnoster"
 
