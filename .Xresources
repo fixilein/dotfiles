@@ -60,7 +60,7 @@ Xcursor.size:                     0
 
 ! use fc-list | grep your font to find fonts!
 !URxvt.font:                       9x15,xft:TerminessTTFNerdFontMono
-URxvt.font:			   xft:Source Code Pro:Regular:size=10,9x15,xft:TerminessTTFNerdFontMono, FontAwesome
+URxvt.font:			   xft:Source Code Pro:Regular:size=10,9x15,xft:MesloLGS NF-11,xft:TerminessTTFNerdFontMono, FontAwesome
 !URxvt.font: xft:bitstream vera sans mono:size=10:antialias=true
 
 !rofi.font: Iosevka 11
