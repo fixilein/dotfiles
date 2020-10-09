@@ -21,6 +21,7 @@ case "$1" in
     bspc monitor DP-1-1 -d 1 2 3 4 5 6 7 8 9 10
     bspc monitor DP-1-3 -d 1 2 3 4 5 6 7 8 9 10
     bspc monitor eDP-1 -r
+    bspc config window_gap 15
     ;;
     "present")
 
@@ -40,6 +41,8 @@ case "$1" in
     bspc monitor eDP-1 -d 1 2 3 4 5 6 7 8 9 10
     bspc monitor DP-1-1 -r
     bspc monitor DP-1-3 -r
+    bspc config window_gap 5
+    pulsemixer --mute # mute volume
     ;;
 esac
 

@@ -1,9 +1,10 @@
 [colors]
 ; background = #00000000 ; transparent 
 ; background = #cc0d0c0e
+background = #dd000000
 
 ; pywall colors
-background = ${xrdb:color0:#222}
+; background = ${xrdb:color0:#222}
 foreground = ${xrdb:color7:#222}
 background-alt =  ${xrdb:color1:#222}
 foreground-alt = ${xrdb:color7:#222}
@@ -67,7 +68,7 @@ font-1 = FontAwesome
 
 modules-left = bspwm xwindow
 modules-center = 
-modules-right = cpu network ping updates-arch volume battery date
+modules-right = wired-network wifi-network ping updates-arch cpu volume battery date
 separator = %{F#4a4a4a}|%{F-}
 
 tray-position = right 
@@ -145,8 +146,10 @@ type = internal/cpu
 interval = 2
 # format-prefix = " "
 # format-prefix = "cpu: "
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-label = %percentage:2%%
+; label = %percentage:2%%
+label = %{A1:urxvt -e zsh -ic gotop &:}%percentage%%%{A}
 
 [module/cool-cpu]
 type = internal/cpu
@@ -198,8 +201,8 @@ bar-load-empty-foreground = #444444
 [module/memory]
 type = internal/memory
 interval = 2
-# format-prefix = ""
-format-prefix = "ram: "
+format-prefix = ""
+# format-prefix = "ram: "
 format-prefix-foreground = ${colors.foreground-alt}
 label = %percentage_used%%
 
@@ -211,7 +214,7 @@ mount-0 = /
 
 ;label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
 ;label-mounted = %mountpoint%: %percentage_free%% of %total%
-label-mounted =%mountpoint%: %free%
+label-mounted = %mountpoint%: %free%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
@@ -296,13 +299,24 @@ ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
 
-[module/network]
+[module/wired-network]
 type = internal/network
 interface = enp11s0u2u4
+; interface = wlp2s0
 interval = 1
 format-connected = <label-connected>
-# format-connected = 
+# format-connected = 
 label-connected = %downspeed% %upspeed%
+label-disconnected = -
+
+[module/wifi-network]
+type = internal/network
+;interface = enp11s0u2u4
+interface = wlp2s0
+interval = 1
+; format-connected = <label-connected><ramp-signal> 
+format-connected = <label-connected>
+label-connected = %essid% [%downspeed% %upspeed%]
 label-disconnected = -
 
 [module/date]
