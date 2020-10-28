@@ -67,8 +67,8 @@ font-0 = fixed:pixelsize=11
 font-1 = FontAwesome
 
 modules-left = bspwm xwindow
-modules-center = 
-modules-right = wired-network wifi-network ping updates-arch cpu volume battery date
+modules-center = music
+modules-right = wired-network wifi-network updates-arch cpu memory volume battery date
 separator = %{F#4a4a4a}|%{F-}
 
 tray-position = right 
@@ -123,7 +123,7 @@ exec = ~/.config/polybar/music
 type = internal/xwindow
 ; label = %title:0:30:...%
 label = %{F#444}%title%
-label-maxlen = 100
+label-maxlen = 75
 
 [module/xkeyboard]
 type = internal/xkeyboard
@@ -201,10 +201,10 @@ bar-load-empty-foreground = #444444
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = ""
+format-prefix = " "
 # format-prefix = "ram: "
 format-prefix-foreground = ${colors.foreground-alt}
-label = %percentage_used%%
+label = %{A1:urxvt -e zsh -ic gotop &:}%percentage_used%%%{A}
 
 [module/filesystem]
 type = internal/fs
@@ -307,7 +307,7 @@ interval = 1
 format-connected = <label-connected>
 # format-connected = 
 label-connected = %downspeed% %upspeed%
-label-disconnected = -
+label-disconnected =
 
 [module/wifi-network]
 type = internal/network
@@ -317,7 +317,7 @@ interval = 1
 ; format-connected = <label-connected><ramp-signal> 
 format-connected = <label-connected>
 label-connected = %essid% [%downspeed% %upspeed%]
-label-disconnected = -
+label-disconnected =
 
 [module/date]
 type = internal/date
@@ -387,7 +387,7 @@ label-discharging = %percentage%%
 ; Available tokens:
 ;   %percentage% (default) - is set to 100 if full-at is reached
 ;   %percentage_raw% (unreleased)
-label-full = 
+label-full =
 
 ; Only applies if <ramp-capacity> is used
 ramp-capacity-0 = 

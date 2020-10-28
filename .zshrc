@@ -1,14 +1,21 @@
-# neofetch --disable theme icons --disable resolution --color_blocks off
-# neofetch --ascii "$(fortune | cowsay)"
-# neofetch --w3m ~/Pictures/Wallpapers_Worth_Saving/wallhaven-132789.jpg
-ufetch
-
 # pywal colors
 (cat ~/.cache/wal/sequences &)
 
+# neofetch --disable theme icons --disable resolution --color_blocks off
+# neofetch --ascii "$(fortune | cowsay)"
+# neofetch --w3m ~/Pictures/Wallpapers_Worth_Saving/wallhaven-132789.jpg
+pfetch
+
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # Current Working directory to PATH
 # export PATH=$PATH:.
-# export PATH=$PATH:~/scripts/
+export PATH=$PATH:~/scripts/
 
 # export MANPATH="/usr/local/man:$MANPATH"
 export BROWSER=/usr/bin/google-chrome-stable
@@ -97,9 +104,9 @@ alias rice='eval $EDITOR $(find ~/rice -type f -not -iwholename "*.git*" | fzf)'
 
 # use $EDITOR as editor
 alias e="eval $EDITOR"
-alias yeet="yay"
+alias yeet="yay --noconfirm"
 alias yote="yay -R"
-alias yeeet="yay -S"
+alias yeeet="yay --noconfirm -S"
 alias u="pacman -Qe | awk '{print $1}' > ~/rice/installed-packages/package-list"
 alias weather="curl wttr.in"
 alias please="sudo"
@@ -111,6 +118,7 @@ alias gs="git status"
 alias b="br --sizes"
 alias vim="nvim"
 alias v="nvim"
+alias calc="bc -ql"
 
 eval $(thefuck --alias)
 
@@ -129,4 +137,5 @@ if [ -f /etc/bash.command-not-found ]; then
     . /etc/bash.command-not-found
 fi
 
-
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

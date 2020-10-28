@@ -10,7 +10,7 @@
 udiskie &
 
 # red light filter
-redshift &
+# redshift & # has its own autostart
 
 # atomatic screen brightness and temperature
 # clight &
@@ -18,7 +18,7 @@ redshift &
 telegram-desktop -startintray &
 
 # hide mouse cursor on inactivity
-unclutter --timeout 3 --ignore-scrolling -b --jitter 1
+unclutter --timeout 5 --ignore-scrolling -b --jitter 1
 
 # espanso daemon &
 
