@@ -141,6 +141,7 @@ autocmd FileType bib inoremap ,c @incollection{<Enter>author<Space>=<Space>{<++>
 
 
 "MARKDOWN
+autocmd FileType markdown map <F4> :w<CR> :!mdtolatex %:p <CR><CR>
 autocmd FileType markdown map <F5> :w<CR> :!mdtolatexpdf %:p <CR><CR>
 autocmd FileType markdown map <F6> : !evince $(echo %:p \| sed 's/md$/pdf/') 2> /dev/null & <CR><CR>
 
