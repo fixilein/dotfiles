@@ -107,7 +107,7 @@ alias e="eval $EDITOR"
 alias yeet="yay --noconfirm"
 alias yote="yay -R"
 alias yeeet="yay --noconfirm -S"
-alias u="pacman -Qe | awk '{print $1}' > ~/rice/installed-packages/package-list"
+# alias u="pacman -Qe | awk '{print $1}' > ~/rice/installed-packages/package-list"
 alias weather="curl wttr.in"
 alias please="sudo"
 alias fucking="sudo"
@@ -119,6 +119,7 @@ alias b="br --sizes"
 alias vim="nvim"
 alias v="nvim"
 alias calc="bc -ql"
+alias sus="systemctl suspend"
 
 eval $(thefuck --alias)
 

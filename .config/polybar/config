@@ -66,7 +66,7 @@ module-margin = 2
 font-0 = fixed:pixelsize=11
 font-1 = FontAwesome
 
-modules-left = bspwm xwindow
+modules-left = bspwm
 modules-center = music
 modules-right = wired-network wifi-network updates-arch cpu memory volume battery date
 separator = %{F#4a4a4a}|%{F-}

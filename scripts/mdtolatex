@@ -1,0 +1,6 @@
+#!/bin/bash
+
+FILE="$1"
+FILEPDF=$(echo "$FILE" | sed 's/md$/tex/')
+pandoc "$FILE" -f markdown -t latex -o "$FILEPDF"
+

@@ -22,8 +22,8 @@ super + Escape
 #
 
 # quit/restart bspwm
-super + alt + {q,r}
-	bspc {quit,wm -r}
+# super + alt + {q,r}
+# 	bspc {quit,wm -r}
 
 # reload screen setup 
 #super + shift + r
@@ -199,4 +199,23 @@ XF86AudioNext
 
 XF86AudioPrev 
     playerctl previous
+
+# unfortunately this does not work (i think because of the multiple curly braces in the command)
+#alt + {h,j,k,l}
+#    xdotool keyup {h,j,k,l} key --clearmodifiers {Left,Down Up,Right} 
+
+alt + j 
+    xdotool keyup j key --clearmodifiers Down
+
+alt + k
+    xdotool keyup k key --clearmodifiers Up
+
+alt + h
+    xdotool keyup h key --clearmodifiers Left
+
+alt + l
+    xdotool keyup l key --clearmodifiers Right
+
+# ctrl + alt + Delete
+#    sleep 1; systemctl suspend
 

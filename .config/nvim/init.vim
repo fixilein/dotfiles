@@ -6,6 +6,8 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'tpope/vim-commentary'
     Plug 'airblade/vim-gitgutter'
 call plug#end()
+" Run :PlugInstall afterwards.
+" Run :PlugClean to remove. 
 
 " enable line numbers
 set number relativenumber
@@ -89,7 +91,7 @@ map <leader><leader> <Esc>/<++><Enter>"_c4l
 
 " LaTeX compile and view  (with fish shell) 
 autocmd FileType tex map <F5> :w<CR> :!latexcompile %:p <CR><CR>
-autocmd FileType tex map <F6> : !evince /tmp/latex/(echo %:t \| sed 's/tex$/pdf/') 2> /dev/null & <CR><CR>
+autocmd FileType tex map <F6> : !evince $(echo %:p \| sed 's/tex$/pdf/') 2> /dev/null & <CR><CR>
 
 
 "" copied from Luke Smith ""
@@ -142,7 +144,7 @@ autocmd FileType bib inoremap ,c @incollection{<Enter>author<Space>=<Space>{<++>
 
 "MARKDOWN
 autocmd FileType markdown map <F4> :w<CR> :!mdtolatex %:p <CR><CR>
-autocmd FileType markdown map <F5> :w<CR> :!mdtolatexpdf %:p <CR><CR>
+autocmd FileType markdown map <F5> :w<CR> :!compile %:p <CR><CR>
 autocmd FileType markdown map <F6> : !evince $(echo %:p \| sed 's/md$/pdf/') 2> /dev/null & <CR><CR>
 
 autocmd Filetype markdown map <leader>w yiWi[<esc>Ea](<esc>pa)
@@ -159,4 +161,9 @@ autocmd Filetype markdown inoremap ,3 ###<Space><Enter><++><Esc>kA
 autocmd Filetype markdown inoremap ,l --------<Enter>
 
 autocmd Filetype markdown map <F8> :! cplastscr<CR><CR>
+
+" NIM
+autocmd BufNewFile,BufRead *.nim setfiletype nim
+autocmd FileType nim map <F5> :w<CR> :!compile %:p <CR>
+
 

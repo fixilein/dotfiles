@@ -1,5 +1,5 @@
 #!/bin/sh
-# compile latex files
+# TODO flags
 
 file=$(readlink -f "$1")
 dir=$(dirname "$file")
@@ -9,11 +9,13 @@ cd "$dir" || exit
 
 textype() { \
 	pdflatex --output-directory="$dir" "$base" &&
-    bibtex "$base" &&
+    biber "$base" &&
 	pdflatex --output-directory="$dir" "$base"
-	}
+}
 
 case "$file" in
 	*\.tex) textype "$file" ;;
-	*\.md) pandoc "$file" --pdf-engine=xelatex -o "$base".pdf ;;
+    *\.md) pandoc "$file" -f markdown -t latex -o "$base".pdf --template eisvogel --listings ;;
+	*\.nim) nim compile "$file" ;;
 esac
+
