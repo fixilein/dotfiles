@@ -28,7 +28,7 @@ bspc config bottom_padding 0
 bspc config single_monocle true
 bspc config gapless_monocle false
 
-# pywal colors are loaded in pywal_reload.sh 
+# pywal colors are loaded in setbg
 
 bspc config focus_follows_pointer true
 
@@ -44,4 +44,5 @@ bspc rule -a Tlp-UI state=pseudo_tiled
 bspc rule -a SimpleScreenRecorder state=pseudo_tiled
 bspc rule -a Xfce4-power-manager-settings state=pseudo_tiled
 bspc rule -a Arandr state=pseudo_tiled
+bspc rule -a Gcolor2 state=pseudo_tiled
 

@@ -11,14 +11,14 @@ if [ $# -eq 1 ]; then
   disown
 
   # reload spotify / spicetify theme
-  spicetify update
-  spicetify apply -n
+  spicetify update & 
+  spicetify apply -n &
 
   # update telgram theme
   # requires https://github.com/matgua/telegram-palette-gen
-  rm ~/.cache/telegram-palette-gen/blurred_background.png ~/.cache/telegram-palette-gen/blurred_background.jpg 2>/dev/null
+  rm ~/.cache/telegram-palette-gen/blurred_background.png ~/.cache/telegram-palette-gen/blurred_background.jpg 2>/dev/null 
   ~/.telegram-palette-gen/telegram-palette-gen --wal
-  convert ~/.cache/telegram-palette-gen/background.png -blur 0x64 ~/.cache/telegram-palette-gen/blurred_background.png 2>/dev/null & # to get even more blur
+  convert ~/.cache/telegram-palette-gen/background.png -blur 0x64 ~/.cache/telegram-palette-gen/blurred_background.png 2>/dev/null & # to get even more blur 
   convert ~/.cache/telegram-palette-gen/background.jpg -blur 0x64 ~/.cache/telegram-palette-gen/blurred_background.jpg 2>/dev/null & # both jpg and png
 
   # IntelliJ Theme

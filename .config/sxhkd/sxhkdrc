@@ -26,12 +26,8 @@ super + Escape
 # 	bspc {quit,wm -r}
 
 # reload screen setup 
-#super + shift + r
-super + alt + 1
-    sh ~/scripts/screen.sh
-
-super + alt + 2
-    sh ~/scripts/screen.sh dock
+super + shift + r
+     sh ~/scripts/screen.sh
 
 # close and kill
 super + {_,shift + }q
@@ -148,6 +144,10 @@ super + {Left,Down,Up,Right}
 super + m 
 	telegram-desktop
 
+# whatsapp web
+super + shift + m 
+    google-chrome-stable --app=https://web.whatsapp.com/
+
 # web browser
 super + {_, shift +} w
 	google-chrome-stable { , --incognito}
@@ -170,7 +170,7 @@ super + alt + x
     betterlockscreen -l dim -t "i use arch btw"
 
 # pulseaudio control
-super + shift + m
+super + n
 	pavucontrol
 
 # volume buttons
@@ -216,6 +216,6 @@ alt + h
 alt + l
     xdotool keyup l key --clearmodifiers Right
 
-# ctrl + alt + Delete
-#    sleep 1; systemctl suspend
+ctrl + alt + Delete
+    sleep 1; systemctl suspend
 

@@ -5,6 +5,7 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'tpope/vim-surround'
     Plug 'tpope/vim-commentary'
     Plug 'airblade/vim-gitgutter'
+    Plug 'vim-scripts/AutoComplPop'
 call plug#end()
 " Run :PlugInstall afterwards.
 " Run :PlugClean to remove. 
@@ -43,6 +44,10 @@ set mouse=a
 " auto-completion
 set wildmode=longest,list,full
 
+set complete+=kspell
+" set completeopt=menuone,longest
+set shortmess+=c "no messages in status bar
+
 " spell checking
 set spelllang=en_us,de_de
 " set spell
@@ -76,6 +81,13 @@ let g:gitgutter_highlight_linenrs = 1
 "inoremap [ []<left>
 "inoremap { {}<left>
 
+" Auto completion 
+" complete suggestion with right arrow. (or Alt + l in my case)
+inoremap <expr> <Right> pumvisible() ? "<C-y>" :"<Right>"
+
+" cancel suggestion with left arrow
+inoremap <expr> <Left> pumvisible() ? "<C-e>" :"<Left>"
+
 " Set leader to comma
 let mapleader =","
 
@@ -107,6 +119,7 @@ autocmd FileType tex inoremap ,bf \textbf{}<++><Esc>T{i
 autocmd FileType tex vnoremap , <ESC>`<i\{<ESC>`>2la}<ESC>?\\{<Enter>a
 autocmd FileType tex inoremap ,it \textit{}<++><Esc>T{i
 autocmd FileType tex inoremap ,ct \textcite{}<++><Esc>T{i
+autocmd FileType tex,markdown inoremap ,cite \cite{}<++><Esc>T{i
 autocmd FileType tex inoremap ,cp \parencite{}<++><Esc>T{i
 autocmd FileType tex inoremap ,glos {\gll<Space><++><Space>\\<Enter><++><Space>\\<Enter>\trans{``<++>''}}<Esc>2k2bcw
 autocmd FileType tex inoremap ,x \begin{xlist}<Enter>\ex<Space><Enter>\end{xlist}<Esc>kA<Space>
@@ -121,7 +134,7 @@ autocmd FileType tex inoremap ,con \const{}<Tab><++><Esc>T{i
 autocmd FileType tex inoremap ,v \vio{}<Tab><++><Esc>T{i
 autocmd FileType tex inoremap ,a \href{}{<++>}<Space><++><Esc>2T{i
 autocmd FileType tex inoremap ,sc \textsc{}<Space><++><Esc>T{i
-autocmd FileType tex inoremap ,chap \chapter{}<Enter><Enter><++><Esc>2kf}i
+autocmd FileType tex,markdown inoremap ,chap \chapter{}<Enter><Enter><++><Esc>2kf}i
 autocmd FileType tex inoremap ,sec \section{}<Enter><Enter><++><Esc>2kf}i
 autocmd FileType tex inoremap ,ssec \subsection{}<Enter><Enter><++><Esc>2kf}i
 autocmd FileType tex inoremap ,sssec \subsubsection{}<Enter><Enter><++><Esc>2kf}i
@@ -159,6 +172,7 @@ autocmd Filetype markdown inoremap ,1 #<Space><Enter><++><Esc>kA
 autocmd Filetype markdown inoremap ,2 ##<Space><Enter><++><Esc>kA
 autocmd Filetype markdown inoremap ,3 ###<Space><Enter><++><Esc>kA
 autocmd Filetype markdown inoremap ,l --------<Enter>
+autocmd Filetype markdown inoremap ,// [//]:<Space>#<Space>
 
 autocmd Filetype markdown map <F8> :! cplastscr<CR><CR>
 

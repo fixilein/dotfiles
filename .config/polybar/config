@@ -2,15 +2,18 @@
 ; background = #00000000 ; transparent 
 ; background = #cc0d0c0e
 background = #dd000000
+foreground = #dfdfdf
+foreground-alt = #dfdfdf
+alert = #7d0800
 
-; pywall colors
+; PYWAL COLORS
 ; background = ${xrdb:color0:#222}
-foreground = ${xrdb:color7:#222}
+; foreground = ${xrdb:color7:#222}
 background-alt =  ${xrdb:color1:#222}
-foreground-alt = ${xrdb:color7:#222}
+; foreground-alt = ${xrdb:color7:#222}
 primary = ${xrdb:color1:#222}
 secondary = ${xrdb:color2:#222}
-alert = ${xrdb:color3:#222}
+; alert = ${xrdb:color3:#222}
 
 [bar/second]
 monitor = ${env:MONITOR:HDMI-1}

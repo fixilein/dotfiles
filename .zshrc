@@ -85,6 +85,7 @@ plugins=(git
          colorize
 	     ssh-agent
 	     wd
+	     autojump
          )
 
 source $ZSH/oh-my-zsh.sh
@@ -120,6 +121,7 @@ alias vim="nvim"
 alias v="nvim"
 alias calc="bc -ql"
 alias sus="systemctl suspend"
+alias genact="clear; /usr/bin/genact"
 
 eval $(thefuck --alias)
 
