@@ -9,5 +9,12 @@ setxkbmap
 # disable CAPS LOCK 
 #xmodmap -e 'clear lock'
 
+# set caps-lock key to escape (escape is still escape)
+# xmodmap -e 'keycode 66 = Escape'
+
+# Right Menu key is now Caps-lock key.
+# xmodmap -e 'keycode 135 = Caps_Lock'
+
 # SWAP ESCAPE AND CAPS LOCK
-setxkbmap -option caps:swapescape
+# setxkbmap -option caps:swapescape
+

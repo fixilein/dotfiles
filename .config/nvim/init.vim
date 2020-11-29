@@ -5,7 +5,8 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'tpope/vim-surround'
     Plug 'tpope/vim-commentary'
     Plug 'airblade/vim-gitgutter'
-    Plug 'vim-scripts/AutoComplPop'
+    " Plug 'vim-scripts/AutoComplPop'
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 " Run :PlugInstall afterwards.
 " Run :PlugClean to remove. 
@@ -44,13 +45,19 @@ set mouse=a
 " auto-completion
 set wildmode=longest,list,full
 
-set complete+=kspell
+" set complete+=kspell
 " set completeopt=menuone,longest
-set shortmess+=c "no messages in status bar
+" set shortmess+=c "no messages in status bar
 
 " spell checking
 set spelllang=en_us,de_de
 " set spell
+" use 'zg' to add word under the cursor to user dict.
+
+" thesaurus
+" disable default keybinding
+let g:online_thesaurus_map_keys = 0
+nnoremap ,the :OnlineThesaurusCurrentWord<CR>
 
 " tab settings
 set tabstop=4
@@ -119,7 +126,7 @@ autocmd FileType tex inoremap ,bf \textbf{}<++><Esc>T{i
 autocmd FileType tex vnoremap , <ESC>`<i\{<ESC>`>2la}<ESC>?\\{<Enter>a
 autocmd FileType tex inoremap ,it \textit{}<++><Esc>T{i
 autocmd FileType tex inoremap ,ct \textcite{}<++><Esc>T{i
-autocmd FileType tex,markdown inoremap ,cite \cite{}<++><Esc>T{i
+autocmd FileType tex inoremap ,cite \cite{}<++><Esc>T{i
 autocmd FileType tex inoremap ,cp \parencite{}<++><Esc>T{i
 autocmd FileType tex inoremap ,glos {\gll<Space><++><Space>\\<Enter><++><Space>\\<Enter>\trans{``<++>''}}<Esc>2k2bcw
 autocmd FileType tex inoremap ,x \begin{xlist}<Enter>\ex<Space><Enter>\end{xlist}<Esc>kA<Space>
@@ -134,7 +141,10 @@ autocmd FileType tex inoremap ,con \const{}<Tab><++><Esc>T{i
 autocmd FileType tex inoremap ,v \vio{}<Tab><++><Esc>T{i
 autocmd FileType tex inoremap ,a \href{}{<++>}<Space><++><Esc>2T{i
 autocmd FileType tex inoremap ,sc \textsc{}<Space><++><Esc>T{i
-autocmd FileType tex,markdown inoremap ,chap \chapter{}<Enter><Enter><++><Esc>2kf}i
+autocmd FileType tex,markdown inoremap ,todo \todo{TODO: }<++><Esc>4hi
+autocmd FileType tex,markdown inoremap ,chap \chapter{}<Enter><++><Esc>kf}i
+autocmd FileType tex,markdown inoremap ,lab \label{}<Enter><++><Esc>kf}i
+autocmd FileType tex,markdown inoremap ,ac \ac{}<++><Esc>T{i
 autocmd FileType tex inoremap ,sec \section{}<Enter><Enter><++><Esc>2kf}i
 autocmd FileType tex inoremap ,ssec \subsection{}<Enter><Enter><++><Esc>2kf}i
 autocmd FileType tex inoremap ,sssec \subsubsection{}<Enter><Enter><++><Esc>2kf}i
@@ -153,10 +163,10 @@ autocmd FileType tex inoremap ,rn (\ref{})<++><Esc>F}i
 autocmd FileType bib inoremap ,a @article{<Enter>author<Space>=<Space>{<++>},<Enter>year<Space>=<Space>{<++>},<Enter>title<Space>=<Space>{<++>},<Enter>journal<Space>=<Space>{<++>},<Enter>volume<Space>=<Space>{<++>},<Enter>pages<Space>=<Space>{<++>},<Enter>}<Enter><++><Esc>8kA,<Esc>i
 autocmd FileType bib inoremap ,b @book{<Enter>author<Space>=<Space>{<++>},<Enter>year<Space>=<Space>{<++>},<Enter>title<Space>=<Space>{<++>},<Enter>publisher<Space>=<Space>{<++>},<Enter>}<Enter><++><Esc>6kA,<Esc>i
 autocmd FileType bib inoremap ,c @incollection{<Enter>author<Space>=<Space>{<++>},<Enter>title<Space>=<Space>{<++>},<Enter>booktitle<Space>=<Space>{<++>},<Enter>editor<Space>=<Space>{<++>},<Enter>year<Space>=<Space>{<++>},<Enter>publisher<Space>=<Space>{<++>},<Enter>}<Enter><++><Esc>8kA,<Esc>i
-
+autocmd FileType bib inoremap ,o @online{<Enter>author<Space>=<Space>{<++>},<Enter>title<Space>=<Space>{<++>},<Enter>year<Space>=<Space>{<++>},<Enter>url<Space>=<Space>{<++>},<Enter>urldate<Space>=<Space>{<++>},<Enter>}<Enter><++><Esc>7kA,<Esc>i
 
 "MARKDOWN
-autocmd FileType markdown map <F4> :w<CR> :!mdtolatex %:p <CR><CR>
+autocmd FileType markdown map <F4> :w<CR> :!compile %:p -tex <CR><CR>
 autocmd FileType markdown map <F5> :w<CR> :!compile %:p <CR><CR>
 autocmd FileType markdown map <F6> : !evince $(echo %:p \| sed 's/md$/pdf/') 2> /dev/null & <CR><CR>
 
@@ -173,6 +183,10 @@ autocmd Filetype markdown inoremap ,2 ##<Space><Enter><++><Esc>kA
 autocmd Filetype markdown inoremap ,3 ###<Space><Enter><++><Esc>kA
 autocmd Filetype markdown inoremap ,l --------<Enter>
 autocmd Filetype markdown inoremap ,// [//]:<Space>#<Space>
+
+" latex cite and ref with non-breaking space
+autocmd FileType markdown inoremap ,cite \<Space>\cite{}<++><Esc>T{i
+autocmd FileType markdown inoremap ,ref \<Space>\ref{}<Space><++><Esc>T{i
 
 autocmd Filetype markdown map <F8> :! cplastscr<CR><CR>
 

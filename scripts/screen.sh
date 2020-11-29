@@ -36,7 +36,7 @@ function dock_mode() {
 
   # set up workspaces for monitors
   bspc monitor DP-1-1 -d 1 2 3 4 5 6 7 8 9 10
-  bspc monitor DP-1-3 -d 1 2 3 4 5 6 7 8   
+  bspc monitor DP-1-3 -d 1 2 3 4 5 6 7   
   bspc monitor eDP-1 -r
   bspc config window_gap 15
   nmcli r wifi off

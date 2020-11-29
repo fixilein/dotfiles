@@ -1,0 +1,15 @@
+#!/bin/bash
+# opens a list of files that i edit for my bachelors thesis
+# as soon as one file is closed the list opens again.
+# TODO extract base folder into variable
+
+FILES="$(find ~/Drive/FH/BA/Arbeit/chapters -iname '*.md')
+$(find ~/Drive/FH/BA/Arbeit/front -iname '*.md')
+/home/felix/Drive/FH/BA/Arbeit/main.tex
+/home/felix/Drive/FH/BA/Arbeit/references.bib
+/home/felix/Drive/FH/BA/Arbeit/acro.tex"
+
+eval $EDITOR $(echo "$FILES" | fzf)
+
+sh ~/scripts/bac # recursive bash :P 
+

@@ -7,7 +7,7 @@
 # libinput-gestures-setup start
 
 # usb auto mounting
-udiskie &
+# udiskie &
 
 # red light filter
 redshift &
@@ -23,7 +23,7 @@ unclutter --timeout 5 --ignore-scrolling -b --jitter 1
 # emacs --daemon &
 
 # bluetooth manager
-blueman-tray &
+# blueman-tray &
 
 # network manager
 nm-applet &

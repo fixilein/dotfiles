@@ -15,7 +15,13 @@ textype() { \
 
 case "$file" in
 	*\.tex) textype "$file" ;;
-    *\.md) pandoc "$file" -f markdown -t latex -o "$base".pdf --template eisvogel --listings ;;
+    *\.md)
+        if [ "$2" == "-tex" ]; then
+            pandoc "$file" -f markdown -t latex -o "$base".tex
+        else 
+            pandoc "$file" -f markdown -t latex -o "$base".pdf --template eisvogel --listings
+        fi
+        ;;
 	*\.nim) nim compile "$file" ;;
 esac
 

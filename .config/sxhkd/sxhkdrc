@@ -1,18 +1,3 @@
-#
-# wm independent hotkeys
-#
-
-# terminal emulator
-super + Return
-	urxvt
-
-# program launcher
-super + @space
-	rofi -show drun -sidebar-mode -modi drun,window -lines 12 -show-icons
-
-XF86Search
-   rofi -show run 
-
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd && notify-send "sxhkd reloaded" -i .
@@ -38,8 +23,8 @@ super + {_,shift + }q
 #	bspc desktop -l next
 
 # send the newest marked node to the newest preselected node
-super + y
-	bspc node newest.marked.local -n newest.!automatic.local
+# super + y
+#	bspc node newest.marked.local -n newest.!automatic.local
 
 # swap the current node and the biggest node
 super + g
@@ -49,9 +34,9 @@ super + g
 # state/flags
 #
 
-# set the window state
+# set the window state (tiled, floating, toggle fullscreen)
 super + {t,shift + t,s,f}
-	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+	bspc node -t {tiled,pseudo_tiled,floating,\~fullscreen}
 
 # set the node flags
 super + ctrl + {m,x,y,z}
@@ -70,16 +55,16 @@ super + {_,shift + }{h,j,k,l}
 # 	bspc node -f @{parent,brother,first,second}
 
 # focus the next/previous node in the current desktop
-super + {_,shift + }c
-	bspc node -f {next,prev}.local
+# super + {_,shift + }c
+#	bspc node -f {next,prev}.local
 
 # focus the next/previous desktop in the current monitor
 super + bracket{left,right}
 	bspc desktop -f {prev,next}.local
 
-# focus the last desktop
+# focus the last desktop on the current monitor
 super + Tab
-    bspc desktop -f last
+    bspc desktop -f last.local
 
 # focus the older or newer node in the focus history
 super + {o,i}
@@ -109,17 +94,21 @@ super + alt + {h,j,k,l}
 # 	bspc node -o 0.{1-9}
 
 # cancel the preselection for the focused node
-super + alt + space
-	bspc node -p cancel
+# super + alt + shift + space
+# bspc node -p cancel
 
 # cancel the preselection for the focused desktop
-super + alt + shift + space
+super + alt + space
 	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
-# resize
-# expand/contract a window 
+# Move current window to a pre-selected space
+super + comma
+    bspc node -n last.!automatic
+
+# resize: expand/contract a window 
 super + control + {h,j,k,l}
-  bspc node -z {left -75 0 || bspc node -z right -75 0, \
+    bspc node -t tiled; \
+    bspc node -z {left -75 0 || bspc node -z right -75 0, \
                 bottom 0 50 || bspc node -z top 0 50,\
                 top 0 -50 || bspc node -z bottom 0 -50,\
                 right 75 0 || bspc node -z left 75 0}
@@ -136,10 +125,32 @@ super + control + {h,j,k,l}
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
+#
+# bsp-layout
+#
+
+# toggle bsp-layout
+super + {_, shift} +e
+   bsp-layout once {tall,rtall}
 
 #
 # applications
 #
+
+# help
+super + u
+    sh ~/scripts/sxhkd-help
+
+# terminal emulator
+super + Return
+	urxvt
+
+# program launcher
+super + @space
+	rofi -show drun -sidebar-mode -modi drun,window -lines 12 -show-icons
+
+XF86Search
+   rofi -show run 
 
 super + m 
 	telegram-desktop
@@ -152,20 +163,30 @@ super + shift + m
 super + {_, shift +} w
 	google-chrome-stable { , --incognito}
 
-# browser fullscreen tiled
-# super + control + t
-#     xdotool key F11; bspc node -t tiled
+# remote desktop
+super + r 
+    google-chrome-stable --app=https://remotedesktop.google.com/access
 
+super + c
+    google-chrome-stable --app=https://calendar.google.com
+
+#
 # screenshots and screen recording
+#
+
+# screenshot gui
 Print
 	flameshot gui -p /tmp
 
+# screenshot full
 super + Print
 	flameshot full -c
 
+# launch simplescreenrecorder
 super + shift + Print 
     simplescreenrecorder
 
+# lock screen
 super + alt + x
     betterlockscreen -l dim -t "i use arch btw"
 
@@ -173,7 +194,10 @@ super + alt + x
 super + n
 	pavucontrol
 
+#
 # volume buttons
+#
+
 XF86AudioLowerVolume
 	pulsemixer --change-volume -5
 
@@ -183,14 +207,20 @@ XF86AudioRaiseVolume
 XF86AudioMute 
 	pulsemixer --toggle-mute
 
+#
 # brightness buttons
+#
+
 XF86MonBrightnessDown
     lux -s 5%
 
 XF86MonBrightnessUp
     lux -a 5%
 
+#
 # media buttons 
+#
+
 XF86AudioPlay 
     playerctl play-pause
 
@@ -200,7 +230,8 @@ XF86AudioNext
 XF86AudioPrev 
     playerctl previous
 
-# unfortunately this does not work (i think because of the multiple curly braces in the command)
+# unfortunately this does not work
+# (i think because of the multiple curly braces in the command)
 #alt + {h,j,k,l}
 #    xdotool keyup {h,j,k,l} key --clearmodifiers {Left,Down Up,Right} 
 
@@ -213,9 +244,29 @@ alt + k
 alt + h
     xdotool keyup h key --clearmodifiers Left
 
+#notify-send "h down"; \
+#xdotool keyup Alt_L keyup h key ; \
+#xdotool keydown Left; \
+#keydown Alt_L keydown h # xdotool keyup h keydown --clearmodifiers Left
+
+#alt + @h
+    #notify-send "h up"; \
+    #xdotool keyup Alt_L keyup h keyup Left # xdotool keyup h keyup --clearmodifiers Left
+
 alt + l
     xdotool keyup l key --clearmodifiers Right
 
 ctrl + alt + Delete
-    sleep 1; systemctl suspend
+    sleep 0.5; systemctl suspend
+
+# Emulate delete key
+@alt + BackSpace
+    xte 'keyup Alt_L' 'key Delete' 'keydown Alt_L'
+
+# from man sxhkd:
+# If @ is added at the beginning of the keysym, the command will be run
+# on key release events, otherwise on key press events.
+#
+# If ~ is added at the beginning of the keysym, the captured event will
+# be replayed for the other clients.
 

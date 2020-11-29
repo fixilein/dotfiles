@@ -15,6 +15,7 @@ fi
 
 # Current Working directory to PATH
 # export PATH=$PATH:.
+# TODO move to .xprofile
 export PATH=$PATH:~/scripts/
 
 # export MANPATH="/usr/local/man:$MANPATH"

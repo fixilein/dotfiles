@@ -15,7 +15,7 @@ wmname LG3D
 
 sh ~/scripts/startup &
 sh ~/scripts/screen.sh &
-# sh ~/scripts/modmap/modmap.sh &
+sh ~/scripts/modmap/modmap.sh &
 
 bspc config remove_disabled_monitors true
 bspc config remove_unplugged_monitors true
@@ -35,9 +35,9 @@ bspc config focus_follows_pointer true
 bspc rule -a mpv state=fullscreen
 
 # bspc rule -a "*" state=pseudo_tiled # all windows pseudo tiling
+# bspc rule -a TelegramDesktop state=pseudo_tiled
 bspc rule -a URxvt state=pseudo_tiled
 bspc rule -a Pcmanfm state=pseudo_tiled
-bspc rule -a TelegramDesktop state=pseudo_tiled
 bspc rule -a Pavucontrol state=pseudo_tiled
 bspc rule -a Insync state=pseudo_tiled
 bspc rule -a Tlp-UI state=pseudo_tiled
