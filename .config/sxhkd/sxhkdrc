@@ -14,6 +14,10 @@ super + Escape
 super + shift + r
      sh ~/scripts/screen.sh
 
+# start / kill compositor
+super + {_, shift +} z
+    {picom --experimental-backends &,killall picom}
+
 # close and kill
 super + {_,shift + }q
 	bspc node -{c,k}
@@ -142,8 +146,8 @@ super + u
     sh ~/scripts/sxhkd-help
 
 # terminal emulator
-super + Return
-	urxvt
+super + {_, shift +} Return
+    {alacritty,urxvt}
 
 # program launcher
 super + @space
@@ -158,6 +162,10 @@ super + m
 # whatsapp web
 super + shift + m 
     google-chrome-stable --app=https://web.whatsapp.com/
+
+super + n
+    google-chrome-stable --app=https://notion.so/
+    # notion-app
 
 # web browser
 super + {_, shift +} w
@@ -191,7 +199,7 @@ super + alt + x
     betterlockscreen -l dim -t "i use arch btw"
 
 # pulseaudio control
-super + n
+super + b
 	pavucontrol
 
 #

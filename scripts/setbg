@@ -4,22 +4,20 @@
 
 if [ $# -eq 1 ]; then
   # SET NEW WALLPAPER
-  wal -q -i $1
+  wal -q -i "$1"
 
   # reload betterlockscreen images
-  betterlockscreen -u $1 -r 1920x1080 >/dev/null &
-  disown
+  betterlockscreen -u $1 -r 1920x1080 >/dev/null &>/dev/null &
 
   # reload spotify / spicetify theme
-  spicetify update & 
-  spicetify apply -n &
+  spicetify update &>/dev/null &&  spicetify apply -n &>/dev/null &
 
   # update telgram theme
   # requires https://github.com/matgua/telegram-palette-gen
-  rm ~/.cache/telegram-palette-gen/blurred_background.png ~/.cache/telegram-palette-gen/blurred_background.jpg 2>/dev/null 
-  ~/.telegram-palette-gen/telegram-palette-gen --wal
-  convert ~/.cache/telegram-palette-gen/background.png -blur 0x64 ~/.cache/telegram-palette-gen/blurred_background.png 2>/dev/null & # to get even more blur 
-  convert ~/.cache/telegram-palette-gen/background.jpg -blur 0x64 ~/.cache/telegram-palette-gen/blurred_background.jpg 2>/dev/null & # both jpg and png
+  rm ~/.cache/telegram-palette-gen/blurred_background.png ~/.cache/telegram-palette-gen/blurred_background.jpg &>/dev/null 
+  ~/.telegram-palette-gen/telegram-palette-gen --wal %>/dev/null &
+  # convert ~/.cache/telegram-palette-gen/background.png -blur 0x64 ~/.cache/telegram-palette-gen/blurred_background.png 2>/dev/null & # to get even more blur 
+  # convert ~/.cache/telegram-palette-gen/background.jpg -blur 0x64 ~/.cache/telegram-palette-gen/blurred_background.jpg 2>/dev/null & # both jpg and png
 
   # IntelliJ Theme
   # requires https://github.com/0x6C38/intellijPywal
@@ -35,9 +33,10 @@ fi
 
 # BSPWM COLORS
 bspc config normal_border_color "$color1"
-bspc config active_border_color "$color2"
-bspc config focused_border_color "$color15"
-bspc config presel_feedback_color "$color1"
+bspc config active_border_color "$color1"
+# bspc config focused_border_color "$color15"
+bspc config focused_border_color "#ffffff"
+bspc config presel_feedback_color "$color2"
 
 reload_dunst() {
   pkill dunst

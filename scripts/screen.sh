@@ -36,9 +36,9 @@ function dock_mode() {
 
   # set up workspaces for monitors
   bspc monitor DP-1-1 -d 1 2 3 4 5 6 7 8 9 10
-  bspc monitor DP-1-3 -d 1 2 3 4 5 6 7   
+  bspc monitor DP-1-3 -d 1 2 3 4 5 6    
   bspc monitor eDP-1 -r
-  bspc config window_gap 15
+  bspc config window_gap 10
   nmcli r wifi off
 }
 
@@ -61,7 +61,7 @@ case "$1" in
 *)
   SC=$(xrandr --query | grep " connected" | wc -l)
   if test "$SC" -eq 1; then
-    internal
+    internal_mode
   elif test "$SC" -eq 3; then
     dock_mode
   elif test "$SC" -eq 2; then
@@ -79,8 +79,9 @@ for m in $(polybar --list-monitors | cut -d":" -f1); do
 done
 
 # restart compton
-pkill compton
-compton &
+pkill picom
+# compton &
+picom --experimental-backends
 
 # start/restart flashfocus
 # pkill flashfocus

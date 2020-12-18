@@ -1,8 +1,8 @@
 #!/bin/bash
 
-player_status=$(playerctl status 2> /dev/null)
+player_status=$(playerctl --player=spotify status 2> /dev/null)
 if [[ $? -eq 0 ]]; then
-   metadata="$(playerctl metadata artist 2> /dev/null) - $(playerctl metadata title 2> /dev/null)"
+   metadata="$(playerctl --player=spotify metadata artist 2> /dev/null) - $(playerctl --player=spotify metadata title 2> /dev/null)"
 fi
 
 if [[ $player_status = "Playing" ]]; then

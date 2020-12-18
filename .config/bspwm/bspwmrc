@@ -22,8 +22,10 @@ bspc config remove_unplugged_monitors true
 
 bspc config border_width 2
 
-bspc config top_padding 0
-bspc config bottom_padding 0
+bspc config top_padding 23
+bspc config bottom_padding -5
+bspc config left_padding -5
+bspc config right_padding -5
 
 bspc config single_monocle true
 bspc config gapless_monocle false
@@ -37,6 +39,7 @@ bspc rule -a mpv state=fullscreen
 # bspc rule -a "*" state=pseudo_tiled # all windows pseudo tiling
 # bspc rule -a TelegramDesktop state=pseudo_tiled
 bspc rule -a URxvt state=pseudo_tiled
+bspc rule -a Alacritty state=pseudo_tiled
 bspc rule -a Pcmanfm state=pseudo_tiled
 bspc rule -a Pavucontrol state=pseudo_tiled
 bspc rule -a Insync state=pseudo_tiled

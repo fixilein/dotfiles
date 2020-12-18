@@ -39,7 +39,10 @@ border-color = #00000000
 module-margin = 2
 
 font-0 = fixed:pixelsize=11
+;font-0 = "Source Code Pro"
 font-1 = FontAwesome
+;font-3 = Noto Sans CJK JP
+
 
 modules-left = bspwm
 modules-center = music
@@ -51,9 +54,9 @@ monitor = ${env:MONITOR:DP-1-1}
 bottom = false
 width = 100%
 height = 27
-; offset-x = 25%
-; offset-y = 50%
-;radius = 0.0
+; offset-x = 5px
+; offset-y = 5px 
+; radius = 5.0
 fixed-center = true 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -84,7 +87,7 @@ tray-background = ${colors.background}
 wm-restack = bspwm
 ;wm-restack = i3
 
-override-redirect = false
+override-redirect = true
 
 ;scroll-up = bspwm-desknext
 ;scroll-down = bspwm-deskprev
@@ -113,7 +116,7 @@ label = %output% ms
 type = custom/script
 exec = ~/.config/polybar/updates-arch.sh
 interval = 900
-label = %{A1:urxvt -e zsh -ic yay &:}%output%%{A}
+label = %{A1:alacritty -e zsh -ic yay &:}%output%%{A}
 
 [module/music]
 type = custom/script
@@ -152,7 +155,7 @@ interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 ; label = %percentage:2%%
-label = %{A1:urxvt -e zsh -ic gotop &:}%percentage%%%{A}
+label = %{A1:alacritty -e zsh -ic gotop &:}%percentage%%%{A}
 
 [module/cool-cpu]
 type = internal/cpu
@@ -207,7 +210,7 @@ interval = 2
 format-prefix = " "
 # format-prefix = "ram: "
 format-prefix-foreground = ${colors.foreground-alt}
-label = %{A1:urxvt -e zsh -ic gotop &:}%percentage_used%%%{A}
+label = %{A1:alacritty -e zsh -ic gotop &:}%percentage_used%%%{A}
 
 [module/filesystem]
 type = internal/fs

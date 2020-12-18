@@ -122,7 +122,7 @@ alias vim="nvim"
 alias v="nvim"
 alias calc="bc -ql"
 alias sus="systemctl suspend"
-alias genact="clear; /usr/bin/genact"
+alias neo="clear; neofetch"
 
 eval $(thefuck --alias)
 
