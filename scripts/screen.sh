@@ -87,5 +87,5 @@ picom --experimental-backends
 # pkill flashfocus
 # flashfocus &
 
-sh ~/scripts/setbg
+bash ~/scripts/setbg
 
